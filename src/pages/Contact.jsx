@@ -42,7 +42,7 @@ function Contact() {
 						<div className="text-center">
 							<div className="mb-4 sm:mb-6">
 								<a
-									href="https://www.linkedin.com/in/youssef-auassar-9a929a26b/"
+									href="https://www.linkedin.com/in/youssefauassar/"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="inline-block hover:-translate-y-2 transition-transform duration-300 ease-in-out"

@@ -9,7 +9,7 @@ function Footer() {
 					<div className="flex flex-col sm:flex-row justify-between items-center py-3 md:py-4 gap-2 sm:gap-0">
 						<div className="text-sm md:text-base font-normal text-black uppercase tracking-wide">
 							<a
-								href="https://www.linkedin.com/in/youssef-auassar-9a929a26b/"
+								href="https://www.linkedin.com/in/youssefauassar/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="hover:underline cursor-pointer"
