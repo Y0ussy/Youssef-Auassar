@@ -127,7 +127,7 @@ function Homepage() {
 					>
 						with a{" "}
 						<span
-							className="inline-block min-w-[150px] sm:min-w-[200px] text-black"
+							className="inline-block min-w-[150px] sm:min-w-[200px] text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600"
 							style={{
 								fontFamily: "Playfair Display, serif",
 								fontStyle: "italic",
@@ -135,7 +135,7 @@ function Homepage() {
 							}}
 						>
 							{currentText}
-							<span className="animate-pulse">|</span>
+							<span className="animate-pulse text-blue-500">|</span>
 						</span>{" "}
 						Mind
 					</h2>

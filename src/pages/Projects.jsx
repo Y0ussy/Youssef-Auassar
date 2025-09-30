@@ -1,5 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+	FaMobileAlt,
+	FaDesktop,
+	FaCode,
+	FaPalette,
+	FaVideo,
+	FaTh
+} from "react-icons/fa";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import logo from "../assets/logo.svg";
@@ -117,13 +125,31 @@ function Projects() {
 							<button
 								key={filter.id}
 								onClick={() => setActiveFilter(filter.id)}
-								className={`px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm md:text-base font-normal transition-all duration-300 ${
+								className={`px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm md:text-base font-normal transition-all duration-300 flex items-center gap-2 ${
 									activeFilter === filter.id
 										? "bg-black text-white"
 										: "bg-white border border-black text-black hover:bg-gray-50"
 								}`}
 								style={{ fontFamily: "Poppins, sans-serif" }}
 							>
+								{filter.id === "all" && (
+									<FaTh className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
+								)}
+								{filter.id === "web-design" && (
+									<FaDesktop className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" />
+								)}
+								{filter.id === "app-design" && (
+									<FaMobileAlt className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />
+								)}
+								{filter.id === "web-development" && (
+									<FaCode className="w-4 h-4 sm:w-5 sm:h-5 text-purple-500" />
+								)}
+								{filter.id === "brand-identity" && (
+									<FaPalette className="w-4 h-4 sm:w-5 sm:h-5 text-pink-500" />
+								)}
+								{filter.id === "motion-design" && (
+									<FaVideo className="w-4 h-4 sm:w-5 sm:h-5 text-red-500" />
+								)}
 								{filter.label}
 							</button>
 						))}

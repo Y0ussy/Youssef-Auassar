@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import profileImage from "../assets/porfiiil.png";
@@ -10,6 +11,41 @@ import photoshopIcon from "../assets/photoshop-icon.png";
 import afterEffectsIcon from "../assets/aftereffecttts.png";
 
 function About() {
+	const heroRef = useRef(null);
+	const aboutTextRef = useRef(null);
+	const educationRef = useRef(null);
+	const toolsRef = useRef(null);
+
+	useEffect(() => {
+		const observerOptions = {
+			threshold: 0.1,
+			rootMargin: "0px 0px -50px 0px"
+		};
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("animate-fade-in");
+				}
+			});
+		}, observerOptions);
+
+		const refs = [heroRef, aboutTextRef, educationRef, toolsRef];
+		refs.forEach((ref) => {
+			if (ref.current) {
+				observer.observe(ref.current);
+			}
+		});
+
+		return () => {
+			refs.forEach((ref) => {
+				if (ref.current) {
+					observer.unobserve(ref.current);
+				}
+			});
+		};
+	}, []);
+
 	return (
 		<div className="min-h-screen">
 			<Navigation />
@@ -40,7 +76,10 @@ function About() {
 			<section className="pb-20">
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 					{/* Hero Section with Image and Intro */}
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-16 sm:mb-20">
+					<div
+						ref={heroRef}
+						className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-16 sm:mb-20 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+					>
 						<div className="order-2 lg:order-1">
 							<div className="w-full h-64 sm:h-80 overflow-hidden">
 								<img
@@ -55,7 +94,10 @@ function About() {
 								className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6"
 								style={{ fontFamily: "Poppins, sans-serif" }}
 							>
-								Hi, I'm <span className="text-black">Youssef</span>
+								Hi, I'm{" "}
+								<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+									Youssef
+								</span>
 							</h2>
 							<p className="text-base sm:text-lg md:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed">
 								A 22-year-old multimedia designer from Brussels, passionate
@@ -63,18 +105,24 @@ function About() {
 								functional.
 							</p>
 							<div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
-								<span className="px-3 sm:px-4 py-2 bg-gray-100 text-black text-xs sm:text-sm font-medium">
+								<span className="px-3 sm:px-4 py-2 bg-gradient-to-r from-pink-100 to-pink-200 text-pink-800 text-xs sm:text-sm font-medium rounded-full border border-pink-300">
 									UI/UX Design
 								</span>
-								<span className="px-3 sm:px-4 py-2 bg-gray-100 text-black text-xs sm:text-sm font-medium">
+								<span className="px-3 sm:px-4 py-2 bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800 text-xs sm:text-sm font-medium rounded-full border border-blue-300">
 									Front-end Development
+								</span>
+								<span className="px-3 sm:px-4 py-2 bg-gradient-to-r from-green-100 to-green-200 text-green-800 text-xs sm:text-sm font-medium rounded-full border border-green-300">
+									Graphic Design
 								</span>
 							</div>
 						</div>
 					</div>
 
 					{/* About Text Section */}
-					<div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
+					<div
+						ref={aboutTextRef}
+						className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+					>
 						<p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 px-4">
 							I specialize in <strong>UI/UX design</strong> and have expertise
 							in brand design, marketing and advertising design, front-end web
@@ -90,10 +138,13 @@ function About() {
 					</div>
 
 					{/* Education Section */}
-					<div className="max-w-4xl mx-auto">
-						<div className="bg-gray-50 p-4 sm:p-6 md:p-8">
+					<div
+						ref={educationRef}
+						className="max-w-4xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+					>
+						<div className="bg-gradient-to-br from-blue-50 to-purple-50 p-4 sm:p-6 md:p-8">
 							<div className="flex items-center mb-4 sm:mb-6">
-								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-black flex items-center justify-center mr-3 sm:mr-4">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mr-3 sm:mr-4 rounded-xl">
 									<svg
 										className="w-5 h-5 sm:w-6 sm:h-6 text-white"
 										fill="none"
@@ -133,7 +184,10 @@ function About() {
 					</div>
 
 					{/* Tools Section */}
-					<div className="max-w-4xl mx-auto mt-12 sm:mt-16">
+					<div
+						ref={toolsRef}
+						className="max-w-4xl mx-auto mt-12 sm:mt-16 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+					>
 						<div className="text-center mb-8 sm:mb-12">
 							<h3
 								className="text-xl sm:text-2xl font-bold"
@@ -143,61 +197,75 @@ function About() {
 							</h3>
 						</div>
 						<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6">
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-orange-50 hover:shadow-md">
 								<img
 									src={htmlIcon}
 									alt="HTML"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium">HTML</p>
+								<p className="text-xs sm:text-sm font-medium text-orange-700">
+									HTML
+								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-blue-50 hover:shadow-md">
 								<img
 									src={cssIcon}
 									alt="CSS"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium">CSS</p>
+								<p className="text-xs sm:text-sm font-medium text-blue-700">
+									CSS
+								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-cyan-50 hover:shadow-md">
 								<img
 									src={reactIcon}
 									alt="React"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium">React</p>
+								<p className="text-xs sm:text-sm font-medium text-cyan-700">
+									React
+								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-purple-50 hover:shadow-md">
 								<img
 									src={figmaIcon}
 									alt="Figma"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium">Figma</p>
+								<p className="text-xs sm:text-sm font-medium text-purple-700">
+									Figma
+								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-orange-50 hover:shadow-md">
 								<img
 									src={illustratorIcon}
 									alt="Illustrator"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium">Illustrator</p>
+								<p className="text-xs sm:text-sm font-medium text-orange-700">
+									Illustrator
+								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-blue-50 hover:shadow-md">
 								<img
 									src={photoshopIcon}
 									alt="Photoshop"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium">Photoshop</p>
+								<p className="text-xs sm:text-sm font-medium text-blue-700">
+									Photoshop
+								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-purple-50 hover:shadow-md">
 								<img
 									src={afterEffectsIcon}
 									alt="After Effects"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium">After Effects</p>
+								<p className="text-xs sm:text-sm font-medium text-purple-700">
+									After Effects
+								</p>
 							</div>
 						</div>
 					</div>
