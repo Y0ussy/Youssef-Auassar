@@ -4,7 +4,7 @@ import fiestaCulturaImage from "../assets/fiesta-cultura.png";
 import bannerF from "../assets/banner-f.png";
 import wireframingF from "../assets/wireframing-f.png";
 import prototypeF from "../assets/prototype-f.png";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 // Import all iPhone images
 import iphone11 from "../assets/iPhone X, XS, 11 Pro – 11.png";
@@ -41,6 +41,10 @@ function FiestaCultura() {
 	const [isDragging, setIsDragging] = useState(false);
 	const [startX, setStartX] = useState(0);
 	const [scrollLeft, setScrollLeft] = useState(0);
+
+	useEffect(() => {
+		document.title = "Youssef Auassar | Fiesta Cultura";
+	}, []);
 
 	const iphoneImages = [
 		iphone11,

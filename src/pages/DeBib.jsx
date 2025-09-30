@@ -2,7 +2,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import debibImage from "../assets/debib.png";
 import bibappImage from "../assets/bibapp.png";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 // Import all design assets for the carousel
 import activiteitenKalender from "../assets/Activiteiten - kalender.png";
@@ -22,6 +22,10 @@ function DeBib() {
 	const [isDragging, setIsDragging] = useState(false);
 	const [startX, setStartX] = useState(0);
 	const [scrollLeft, setScrollLeft] = useState(0);
+
+	useEffect(() => {
+		document.title = "Youssef Auassar | De Bib";
+	}, []);
 
 	const designImages = [
 		startpagina,

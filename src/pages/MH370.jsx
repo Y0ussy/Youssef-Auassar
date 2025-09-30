@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import motionMoodboard from "../assets/motion-moodboard.png";
 
 function MH370() {
+	useEffect(() => {
+		document.title = "Youssef Auassar | MH370";
+	}, []);
 	return (
 		<div className="min-h-screen">
 			<Navigation />

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import moodyImage from "../assets/moody.png";
@@ -7,6 +8,9 @@ import orange from "../assets/orange.png";
 import grape from "../assets/grape.png";
 
 function MoodyMingle() {
+	useEffect(() => {
+		document.title = "Youssef Auassar | Moody Mingle";
+	}, []);
 	return (
 		<div className="min-h-screen">
 			<Navigation />

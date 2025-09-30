@@ -17,6 +17,10 @@ function About() {
 	const toolsRef = useRef(null);
 
 	useEffect(() => {
+		document.title = "Youssef Auassar | About";
+	}, []);
+
+	useEffect(() => {
 		const observerOptions = {
 			threshold: 0.1,
 			rootMargin: "0px 0px -50px 0px"

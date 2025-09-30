@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import studieLogo from "../assets/studie-logo.png";
 import studieMatchImage from "../assets/studiematch-big.png";
 
 function StudieMatch() {
+	useEffect(() => {
+		document.title = "Youssef Auassar | Studie Match";
+	}, []);
 	return (
 		<div className="min-h-screen">
 			<Navigation />

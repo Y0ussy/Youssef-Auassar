@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
 	FaMobileAlt,
@@ -19,6 +19,10 @@ import planeImage from "../assets/plane.png";
 
 function Projects() {
 	const [activeFilter, setActiveFilter] = useState("all");
+
+	useEffect(() => {
+		document.title = "Youssef Auassar | Projects";
+	}, []);
 
 	const filters = [
 		{ id: "all", label: "All projects" },

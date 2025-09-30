@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import linkedinLogo from "../assets/linkedin-logo.png";
 import gmailLogo from "../assets/gmail-logo.png";
 
 function Contact() {
+	useEffect(() => {
+		document.title = "Youssef Auassar | Contact";
+	}, []);
 	return (
 		<div className="min-h-screen">
 			<Navigation />

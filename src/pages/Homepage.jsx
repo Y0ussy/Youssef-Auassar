@@ -29,6 +29,10 @@ function Homepage() {
 	];
 
 	useEffect(() => {
+		document.title = "Youssef Auassar | Portfolio";
+	}, []);
+
+	useEffect(() => {
 		// Check if the user has already seen the intro animation
 		const hasSeenIntro = sessionStorage.getItem("hasSeenIntro");
 		console.log("hasSeenIntro:", hasSeenIntro);
