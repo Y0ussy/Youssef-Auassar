@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.svg";
+import resumePDF from "../assets/youssefauassar_resume.pdf";
 
 function Navigation() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,7 +67,8 @@ function Navigation() {
 					{/* Right Resume Button */}
 					<div className="hidden md:block">
 						<a
-							href="#resume"
+							href={resumePDF}
+							download="Youssef_Auassar_Resume.pdf"
 							className="bg-black text-white px-6 py-3 rounded-full text-sm md:text-base hover:bg-gray-800 transition-colors duration-300"
 							style={{ fontFamily: "Poppins, sans-serif", fontWeight: "400" }}
 						>
@@ -144,8 +146,10 @@ function Navigation() {
 								contact
 							</Link>
 							<a
-								href="#resume"
+								href={resumePDF}
+								download="Youssef_Auassar_Resume.pdf"
 								className="block px-3 py-2 text-black text-base sm:text-lg rounded-full mx-2 hover:bg-gray-100 transition-all duration-300"
+								onClick={() => setIsMenuOpen(false)}
 							>
 								resume
 							</a>
