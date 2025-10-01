@@ -6,13 +6,73 @@ import studieMatchImage from "../assets/studiematch-big.png";
 
 function StudieMatch() {
 	useEffect(() => {
-		document.title = "Youssef Auassar | Studie Match";
+		document.title = "Studie Match | Youssef Auassar Portfolio";
+
+		// Add meta description
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				"content",
+				"Studie Match - A website that helps young people choose their ideal study direction based on their personality. Interactive RIASEC test with personalized study recommendations."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "description";
+			meta.content =
+				"Studie Match - A website that helps young people choose their ideal study direction based on their personality. Interactive RIASEC test with personalized study recommendations.";
+			document.head.appendChild(meta);
+		}
+
+		// Add Open Graph tags
+		const ogTitle = document.querySelector('meta[property="og:title"]');
+		if (ogTitle) {
+			ogTitle.setAttribute(
+				"content",
+				"Studie Match | Youssef Auassar Portfolio"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:title");
+			meta.content = "Studie Match | Youssef Auassar Portfolio";
+			document.head.appendChild(meta);
+		}
+
+		const ogDescription = document.querySelector(
+			'meta[property="og:description"]'
+		);
+		if (ogDescription) {
+			ogDescription.setAttribute(
+				"content",
+				"Interactive web application that helps young people find their ideal study direction based on personality through RIASEC testing."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:description");
+			meta.content =
+				"Interactive web application that helps young people find their ideal study direction based on personality through RIASEC testing.";
+			document.head.appendChild(meta);
+		}
+
+		// Add keywords
+		const keywords = document.querySelector('meta[name="keywords"]');
+		if (keywords) {
+			keywords.setAttribute(
+				"content",
+				"Studie Match, study choice, RIASEC test, personality test, education, web development, UI/UX design, Youssef Auassar, portfolio, interactive website"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "keywords";
+			meta.content =
+				"Studie Match, study choice, RIASEC test, personality test, education, web development, UI/UX design, Youssef Auassar, portfolio, interactive website";
+			document.head.appendChild(meta);
+		}
 	}, []);
 	return (
 		<div className="min-h-screen">
 			<Navigation />
 			{/* Project Title and Categories */}
-			<section className="pt-32 sm:pt-40 pb-12 sm:pb-20">
+			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black mb-4 sm:mb-6">
 						<span
@@ -30,7 +90,7 @@ function StudieMatch() {
 				</div>
 			</section>
 			{/* Hero Section */}
-			<section className="pb-12 sm:pb-20">
+			<section className="pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="relative bg-gradient-to-t from-[#50AABE] to-[#DBF6F4] overflow-hidden">
 						{/* Main image centered */}
@@ -45,7 +105,7 @@ function StudieMatch() {
 				</div>
 			</section>
 			{/* About Studie Match Section */}
-			<section className="py-12 sm:py-20">
+			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 items-center">
 						{/* Large logo */}
@@ -101,7 +161,7 @@ function StudieMatch() {
 			</section>
 
 			{/* GIFs Section */}
-			<section className="py-12 sm:py-20">
+			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
 						{/* Home Page GIF */}
@@ -147,7 +207,7 @@ function StudieMatch() {
 			</section>
 
 			{/* Showreel Video Section */}
-			<section className="py-12 sm:py-20">
+			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<h2
 						className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-8 sm:mb-12 text-center"
@@ -176,7 +236,7 @@ function StudieMatch() {
 				</div>
 			</section>
 			{/* Call to Action */}
-			<section className="py-12 sm:py-20">
+			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<button className="bg-white border-2 border-black text-black px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-semibold hover:bg-black hover:text-white transition-colors duration-300">
 						Bezoek website

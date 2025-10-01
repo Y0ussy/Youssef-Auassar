@@ -43,7 +43,67 @@ function FiestaCultura() {
 	const [scrollLeft, setScrollLeft] = useState(0);
 
 	useEffect(() => {
-		document.title = "Youssef Auassar | Fiesta Cultura";
+		document.title = "Fiesta Cultura | Youssef Auassar Portfolio";
+
+		// Add meta description
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				"content",
+				"Fiesta Cultura - A multicultural festival event app that brings different cultures together through music, dance, food, and traditions. UX research and app design project."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "description";
+			meta.content =
+				"Fiesta Cultura - A multicultural festival event app that brings different cultures together through music, dance, food, and traditions. UX research and app design project.";
+			document.head.appendChild(meta);
+		}
+
+		// Add Open Graph tags
+		const ogTitle = document.querySelector('meta[property="og:title"]');
+		if (ogTitle) {
+			ogTitle.setAttribute(
+				"content",
+				"Fiesta Cultura | Youssef Auassar Portfolio"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:title");
+			meta.content = "Fiesta Cultura | Youssef Auassar Portfolio";
+			document.head.appendChild(meta);
+		}
+
+		const ogDescription = document.querySelector(
+			'meta[property="og:description"]'
+		);
+		if (ogDescription) {
+			ogDescription.setAttribute(
+				"content",
+				"Multicultural festival event app design that helps users discover cultural events, buy tickets, and share experiences."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:description");
+			meta.content =
+				"Multicultural festival event app design that helps users discover cultural events, buy tickets, and share experiences.";
+			document.head.appendChild(meta);
+		}
+
+		// Add keywords
+		const keywords = document.querySelector('meta[name="keywords"]');
+		if (keywords) {
+			keywords.setAttribute(
+				"content",
+				"Fiesta Cultura, multicultural festival, app design, UX research, event app, cultural diversity, mobile design, Youssef Auassar, portfolio"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "keywords";
+			meta.content =
+				"Fiesta Cultura, multicultural festival, app design, UX research, event app, cultural diversity, mobile design, Youssef Auassar, portfolio";
+			document.head.appendChild(meta);
+		}
 	}, []);
 
 	const iphoneImages = [
@@ -103,7 +163,7 @@ function FiestaCultura() {
 		<div className="min-h-screen">
 			<Navigation />
 			{/* Project Title and Categories */}
-			<section className="pt-40 pb-20">
+			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h1 className="text-5xl md:text-6xl lg:text-7xl text-black mb-6">
 						<span
@@ -121,7 +181,7 @@ function FiestaCultura() {
 				</div>
 			</section>
 			{/* Hero Section */}
-			<section className="pb-20">
+			<section className="pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<img
 						src={bannerF}
@@ -131,7 +191,7 @@ function FiestaCultura() {
 				</div>
 			</section>
 			{/* About Fiesta Cultura Section */}
-			<section className="py-20">
+			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-left">
 						<h2 className="text-4xl md:text-5xl text-black mb-8">
@@ -166,7 +226,7 @@ function FiestaCultura() {
 			</section>
 
 			{/* Wireframing & Prototype Section */}
-			<section className="py-20">
+			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-left mb-12">
 						<h2 className="text-4xl md:text-5xl text-black mb-6">
@@ -209,7 +269,7 @@ function FiestaCultura() {
 			</section>
 
 			{/* Design Section */}
-			<section className="pt-20 pb-4">
+			<section className="pt-8 sm:pt-12 pb-4">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex items-center justify-between mb-12">
 						<h2 className="text-4xl md:text-5xl text-black">

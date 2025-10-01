@@ -17,7 +17,67 @@ function About() {
 	const toolsRef = useRef(null);
 
 	useEffect(() => {
-		document.title = "Youssef Auassar | About";
+		document.title = "About Youssef Auassar | Digital Designer & Developer";
+
+		// Add meta description
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				"content",
+				"Learn about Youssef Auassar, a 22-year-old digital designer and developer from Brussels. Specializing in UI/UX design, web development, and multimedia design."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "description";
+			meta.content =
+				"Learn about Youssef Auassar, a 22-year-old digital designer and developer from Brussels. Specializing in UI/UX design, web development, and multimedia design.";
+			document.head.appendChild(meta);
+		}
+
+		// Add Open Graph tags
+		const ogTitle = document.querySelector('meta[property="og:title"]');
+		if (ogTitle) {
+			ogTitle.setAttribute(
+				"content",
+				"About Youssef Auassar | Digital Designer & Developer"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:title");
+			meta.content = "About Youssef Auassar | Digital Designer & Developer";
+			document.head.appendChild(meta);
+		}
+
+		const ogDescription = document.querySelector(
+			'meta[property="og:description"]'
+		);
+		if (ogDescription) {
+			ogDescription.setAttribute(
+				"content",
+				"22-year-old digital designer and developer from Brussels. Specializing in UI/UX design, web development, and multimedia design."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:description");
+			meta.content =
+				"22-year-old digital designer and developer from Brussels. Specializing in UI/UX design, web development, and multimedia design.";
+			document.head.appendChild(meta);
+		}
+
+		// Add keywords
+		const keywords = document.querySelector('meta[name="keywords"]');
+		if (keywords) {
+			keywords.setAttribute(
+				"content",
+				"Youssef Auassar, about, digital designer, web developer, UI/UX designer, Brussels, multimedia design, Erasmushogeschool, portfolio, skills, experience"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "keywords";
+			meta.content =
+				"Youssef Auassar, about, digital designer, web developer, UI/UX designer, Brussels, multimedia design, Erasmushogeschool, portfolio, skills, experience";
+			document.head.appendChild(meta);
+		}
 	}, []);
 
 	useEffect(() => {
@@ -55,34 +115,37 @@ function About() {
 			<Navigation />
 
 			{/* About Header */}
-			<section className="pt-32 sm:pt-40 pb-8">
-				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black mb-8">
-						<span
-							style={{
-								fontFamily: "Playfair Display, serif",
-								fontWeight: "normal",
-								fontStyle: "italic"
-							}}
-						>
-							About
-						</span>{" "}
-						<span
-							style={{ fontFamily: "Poppins, sans-serif", fontWeight: "700" }}
-						>
-							Me
-						</span>
-					</h1>
+			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					{/* Main Title */}
+					<div className="text-center mb-8 sm:mb-12">
+						<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black">
+							<span
+								style={{
+									fontFamily: "Playfair Display, serif",
+									fontWeight: "normal",
+									fontStyle: "italic"
+								}}
+							>
+								About
+							</span>{" "}
+							<span
+								style={{ fontFamily: "Poppins, sans-serif", fontWeight: "700" }}
+							>
+								Me
+							</span>
+						</h1>
+					</div>
 				</div>
 			</section>
 
 			{/* About Content */}
-			<section className="pb-20">
+			<section className="pt-4 sm:pt-6 pb-20">
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 					{/* Hero Section with Image and Intro */}
 					<div
 						ref={heroRef}
-						className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-16 sm:mb-20 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+						className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-16 sm:mb-20 opacity-0 translate-y-8 transition-all duration-1000 ease-out -mt-8 sm:-mt-12"
 					>
 						<div className="order-2 lg:order-1">
 							<div className="w-full h-64 sm:h-80 overflow-hidden">

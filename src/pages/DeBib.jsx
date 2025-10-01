@@ -24,7 +24,64 @@ function DeBib() {
 	const [scrollLeft, setScrollLeft] = useState(0);
 
 	useEffect(() => {
-		document.title = "Youssef Auassar | De Bib";
+		document.title = "De Bib | Youssef Auassar Portfolio";
+
+		// Add meta description
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				"content",
+				"De Bib - A modern library app for borrowing books, eBooks, and audiobooks. UI/UX design project for the local library in Brussels with user-friendly interface."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "description";
+			meta.content =
+				"De Bib - A modern library app for borrowing books, eBooks, and audiobooks. UI/UX design project for the local library in Brussels with user-friendly interface.";
+			document.head.appendChild(meta);
+		}
+
+		// Add Open Graph tags
+		const ogTitle = document.querySelector('meta[property="og:title"]');
+		if (ogTitle) {
+			ogTitle.setAttribute("content", "De Bib | Youssef Auassar Portfolio");
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:title");
+			meta.content = "De Bib | Youssef Auassar Portfolio";
+			document.head.appendChild(meta);
+		}
+
+		const ogDescription = document.querySelector(
+			'meta[property="og:description"]'
+		);
+		if (ogDescription) {
+			ogDescription.setAttribute(
+				"content",
+				"Modern library app design for borrowing books, eBooks, and audiobooks with user-friendly interface and book sharing features."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:description");
+			meta.content =
+				"Modern library app design for borrowing books, eBooks, and audiobooks with user-friendly interface and book sharing features.";
+			document.head.appendChild(meta);
+		}
+
+		// Add keywords
+		const keywords = document.querySelector('meta[name="keywords"]');
+		if (keywords) {
+			keywords.setAttribute(
+				"content",
+				"De Bib, library app, book borrowing, eBooks, audiobooks, UI/UX design, Brussels library, app design, Youssef Auassar, portfolio"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "keywords";
+			meta.content =
+				"De Bib, library app, book borrowing, eBooks, audiobooks, UI/UX design, Brussels library, app design, Youssef Auassar, portfolio";
+			document.head.appendChild(meta);
+		}
 	}, []);
 
 	const designImages = [
@@ -67,7 +124,7 @@ function DeBib() {
 		<div className="min-h-screen">
 			<Navigation />
 			{/* Project Title and Categories */}
-			<section className="pt-32 sm:pt-40 pb-12 sm:pb-20">
+			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black mb-4 sm:mb-6">
 						<span
@@ -85,7 +142,7 @@ function DeBib() {
 				</div>
 			</section>
 			{/* Hero Section */}
-			<section className="pb-12 sm:pb-20">
+			<section className="pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<img
 						src={bibappImage}
@@ -95,7 +152,7 @@ function DeBib() {
 				</div>
 			</section>
 			{/* About De Bib Section */}
-			<section className="py-12 sm:py-20">
+			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-left">
 						<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-6 sm:mb-8">
@@ -130,7 +187,7 @@ function DeBib() {
 			</section>
 
 			{/* Design Section */}
-			<section className="pt-12 sm:pt-20 pb-4">
+			<section className="pt-8 sm:pt-12 pb-4">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex items-center justify-between mb-8 sm:mb-12">
 						<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black">

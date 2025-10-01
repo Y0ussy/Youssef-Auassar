@@ -21,7 +21,64 @@ function Projects() {
 	const [activeFilter, setActiveFilter] = useState("all");
 
 	useEffect(() => {
-		document.title = "Youssef Auassar | Projects";
+		document.title = "Projects | Youssef Auassar Portfolio";
+
+		// Add meta description
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				"content",
+				"Explore Youssef Auassar's portfolio of digital design and development projects. Including web design, app design, brand identity, and motion design projects."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "description";
+			meta.content =
+				"Explore Youssef Auassar's portfolio of digital design and development projects. Including web design, app design, brand identity, and motion design projects.";
+			document.head.appendChild(meta);
+		}
+
+		// Add Open Graph tags
+		const ogTitle = document.querySelector('meta[property="og:title"]');
+		if (ogTitle) {
+			ogTitle.setAttribute("content", "Projects | Youssef Auassar Portfolio");
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:title");
+			meta.content = "Projects | Youssef Auassar Portfolio";
+			document.head.appendChild(meta);
+		}
+
+		const ogDescription = document.querySelector(
+			'meta[property="og:description"]'
+		);
+		if (ogDescription) {
+			ogDescription.setAttribute(
+				"content",
+				"Explore Youssef Auassar's portfolio of digital design and development projects. Including web design, app design, brand identity, and motion design projects."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:description");
+			meta.content =
+				"Explore Youssef Auassar's portfolio of digital design and development projects. Including web design, app design, brand identity, and motion design projects.";
+			document.head.appendChild(meta);
+		}
+
+		// Add keywords
+		const keywords = document.querySelector('meta[name="keywords"]');
+		if (keywords) {
+			keywords.setAttribute(
+				"content",
+				"Youssef Auassar, projects, portfolio, web design, app design, brand identity, motion design, UI/UX design, digital design, Studie Match, Fiesta Cultura, De Bib, Moody Mingle, MH370"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "keywords";
+			meta.content =
+				"Youssef Auassar, projects, portfolio, web design, app design, brand identity, motion design, UI/UX design, digital design, Studie Match, Fiesta Cultura, De Bib, Moody Mingle, MH370";
+			document.head.appendChild(meta);
+		}
 	}, []);
 
 	const filters = [
@@ -101,10 +158,10 @@ function Projects() {
 			<Navigation />
 
 			{/* Projects Header */}
-			<section className="pt-32 sm:pt-40 pb-12 sm:pb-20">
+			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					{/* Main Title */}
-					<div className="text-center mb-12 sm:mb-16">
+					<div className="text-center mb-8 sm:mb-12">
 						<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black">
 							<span
 								style={{
@@ -162,16 +219,16 @@ function Projects() {
 			</section>
 
 			{/* Projects Grid */}
-			<section className="pb-12 sm:pb-20 -mt-4 sm:-mt-8">
+			<section className="pb-8 sm:pb-12 -mt-2 sm:-mt-4">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
 						{filteredProjects.map((project) => (
 							<div key={project.id} className="rounded-none overflow-hidden">
 								{project.id === "studie-match" ? (
 									<Link to="/studie-match" className="block">
 										<div className="">
 											<div
-												className={`relative mb-4 ${project.background} p-4 sm:p-6 md:p-8 h-48 sm:h-64 md:h-96 flex items-center justify-center overflow-hidden`}
+												className={`relative mb-3 ${project.background} p-3 sm:p-4 md:p-6 h-40 sm:h-56 md:h-80 flex items-center justify-center overflow-hidden`}
 											>
 												{project.image ? (
 													<img
@@ -185,7 +242,7 @@ function Projects() {
 													</div>
 												)}
 											</div>
-											<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 md:mb-3 px-4 md:px-0">
+											<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-1 md:mb-2 px-4 md:px-0">
 												{project.title}
 											</h3>
 											<p className="text-gray-700 text-sm sm:text-base md:text-lg px-4 md:px-0">
@@ -197,7 +254,7 @@ function Projects() {
 									<Link to="/fiesta-cultura" className="block">
 										<div className="">
 											<div
-												className={`relative mb-4 ${project.background} p-4 sm:p-6 md:p-8 h-48 sm:h-64 md:h-96 flex items-center justify-center overflow-hidden`}
+												className={`relative mb-3 ${project.background} p-3 sm:p-4 md:p-6 h-40 sm:h-56 md:h-80 flex items-center justify-center overflow-hidden`}
 											>
 												{project.image ? (
 													<img
@@ -211,7 +268,7 @@ function Projects() {
 													</div>
 												)}
 											</div>
-											<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 md:mb-3 px-4 md:px-0">
+											<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-1 md:mb-2 px-4 md:px-0">
 												{project.title}
 											</h3>
 											<p className="text-gray-700 text-sm sm:text-base md:text-lg px-4 md:px-0">
@@ -223,7 +280,7 @@ function Projects() {
 									<Link to="/de-bib" className="block">
 										<div className="">
 											<div
-												className={`relative mb-4 ${project.background} p-4 sm:p-6 md:p-8 h-48 sm:h-64 md:h-96 flex items-center justify-center overflow-hidden`}
+												className={`relative mb-3 ${project.background} p-3 sm:p-4 md:p-6 h-40 sm:h-56 md:h-80 flex items-center justify-center overflow-hidden`}
 											>
 												{project.image ? (
 													<img
@@ -237,7 +294,7 @@ function Projects() {
 													</div>
 												)}
 											</div>
-											<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 md:mb-3 px-4 md:px-0">
+											<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-1 md:mb-2 px-4 md:px-0">
 												{project.title}
 											</h3>
 											<p className="text-gray-700 text-sm sm:text-base md:text-lg px-4 md:px-0">
@@ -249,7 +306,7 @@ function Projects() {
 									<Link to="/mh370" className="block">
 										<div className="">
 											<div
-												className={`relative mb-4 ${project.background} p-4 sm:p-6 md:p-8 h-48 sm:h-64 md:h-96 flex items-center justify-center overflow-hidden`}
+												className={`relative mb-3 ${project.background} p-3 sm:p-4 md:p-6 h-40 sm:h-56 md:h-80 flex items-center justify-center overflow-hidden`}
 											>
 												{project.image ? (
 													<img
@@ -263,7 +320,7 @@ function Projects() {
 													</div>
 												)}
 											</div>
-											<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 md:mb-3 px-4 md:px-0">
+											<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-1 md:mb-2 px-4 md:px-0">
 												{project.title}
 											</h3>
 											<p className="text-gray-700 text-sm sm:text-base md:text-lg px-4 md:px-0">
@@ -275,7 +332,7 @@ function Projects() {
 									<Link to="/moody-mingle" className="block">
 										<div className="">
 											<div
-												className={`relative mb-4 ${project.background} p-4 sm:p-6 md:p-8 h-48 sm:h-64 md:h-96 flex items-center justify-center overflow-hidden`}
+												className={`relative mb-3 ${project.background} p-3 sm:p-4 md:p-6 h-40 sm:h-56 md:h-80 flex items-center justify-center overflow-hidden`}
 											>
 												{project.image ? (
 													<img
@@ -289,7 +346,7 @@ function Projects() {
 													</div>
 												)}
 											</div>
-											<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 md:mb-3 px-4 md:px-0">
+											<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-1 md:mb-2 px-4 md:px-0">
 												{project.title}
 											</h3>
 											<p className="text-gray-700 text-sm sm:text-base md:text-lg px-4 md:px-0">
@@ -300,7 +357,7 @@ function Projects() {
 								) : (
 									<div className="">
 										<div
-											className={`relative mb-4 ${project.background} p-4 md:p-8 h-64 md:h-96 flex items-center justify-center overflow-hidden`}
+											className={`relative mb-3 ${project.background} p-3 md:p-6 h-56 md:h-80 flex items-center justify-center overflow-hidden`}
 										>
 											{project.image ? (
 												<img
@@ -314,7 +371,7 @@ function Projects() {
 												</div>
 											)}
 										</div>
-										<h3 className="text-xl md:text-2xl font-bold text-black mb-2 md:mb-3 px-4 md:px-0">
+										<h3 className="text-xl md:text-2xl font-bold text-black mb-1 md:mb-2 px-4 md:px-0">
 											{project.title}
 										</h3>
 										<p className="text-gray-700 text-base md:text-lg px-4 md:px-0">

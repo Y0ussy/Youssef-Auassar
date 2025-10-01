@@ -9,13 +9,73 @@ import grape from "../assets/grape.png";
 
 function MoodyMingle() {
 	useEffect(() => {
-		document.title = "Youssef Auassar | Moody Mingle";
+		document.title = "Moody Mingle | Youssef Auassar Portfolio";
+
+		// Add meta description
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				"content",
+				"Moody Mingle - An innovative chewing gum brand that connects people through shared experiences. Brand identity and packaging design project with modern, social approach."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "description";
+			meta.content =
+				"Moody Mingle - An innovative chewing gum brand that connects people through shared experiences. Brand identity and packaging design project with modern, social approach.";
+			document.head.appendChild(meta);
+		}
+
+		// Add Open Graph tags
+		const ogTitle = document.querySelector('meta[property="og:title"]');
+		if (ogTitle) {
+			ogTitle.setAttribute(
+				"content",
+				"Moody Mingle | Youssef Auassar Portfolio"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:title");
+			meta.content = "Moody Mingle | Youssef Auassar Portfolio";
+			document.head.appendChild(meta);
+		}
+
+		const ogDescription = document.querySelector(
+			'meta[property="og:description"]'
+		);
+		if (ogDescription) {
+			ogDescription.setAttribute(
+				"content",
+				"Innovative chewing gum brand design that connects people through shared experiences with modern design and playful, social approach."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:description");
+			meta.content =
+				"Innovative chewing gum brand design that connects people through shared experiences with modern design and playful, social approach.";
+			document.head.appendChild(meta);
+		}
+
+		// Add keywords
+		const keywords = document.querySelector('meta[name="keywords"]');
+		if (keywords) {
+			keywords.setAttribute(
+				"content",
+				"Moody Mingle, chewing gum, brand identity, packaging design, social connection, brand design, Youssef Auassar, portfolio, visual identity"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "keywords";
+			meta.content =
+				"Moody Mingle, chewing gum, brand identity, packaging design, social connection, brand design, Youssef Auassar, portfolio, visual identity";
+			document.head.appendChild(meta);
+		}
 	}, []);
 	return (
 		<div className="min-h-screen">
 			<Navigation />
 			{/* Project Title and Categories */}
-			<section className="pt-40 pb-20">
+			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h1 className="text-5xl md:text-6xl lg:text-7xl text-black mb-6">
 						<span
@@ -33,7 +93,7 @@ function MoodyMingle() {
 				</div>
 			</section>
 			{/* Hero Section */}
-			<section className="pb-20">
+			<section className="pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="relative bg-gradient-to-b from-[#FFFFFF] to-[#4B7BBE] overflow-hidden">
 						{/* Main image centered */}
@@ -48,7 +108,7 @@ function MoodyMingle() {
 				</div>
 			</section>
 			{/* About Moody Mingle Section */}
-			<section className="py-20">
+			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-left">
 						<h2 className="text-4xl md:text-5xl text-black mb-8">
@@ -102,7 +162,7 @@ function MoodyMingle() {
 			</section>
 
 			{/* Packaging Design Section */}
-			<section className="py-20">
+			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-left mb-12">
 						<h2 className="text-4xl md:text-5xl text-black mb-6">

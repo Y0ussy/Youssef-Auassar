@@ -5,13 +5,73 @@ import motionMoodboard from "../assets/motion-moodboard.png";
 
 function MH370() {
 	useEffect(() => {
-		document.title = "Youssef Auassar | MH370";
+		document.title = "MH370 Motion Design | Youssef Auassar Portfolio";
+
+		// Add meta description
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				"content",
+				"The Disappearance of MH370 - A motion infographic about the disappearance of flight MH370. Motion design project combining storytelling, sound design, and visual communication."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "description";
+			meta.content =
+				"The Disappearance of MH370 - A motion infographic about the disappearance of flight MH370. Motion design project combining storytelling, sound design, and visual communication.";
+			document.head.appendChild(meta);
+		}
+
+		// Add Open Graph tags
+		const ogTitle = document.querySelector('meta[property="og:title"]');
+		if (ogTitle) {
+			ogTitle.setAttribute(
+				"content",
+				"MH370 Motion Design | Youssef Auassar Portfolio"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:title");
+			meta.content = "MH370 Motion Design | Youssef Auassar Portfolio";
+			document.head.appendChild(meta);
+		}
+
+		const ogDescription = document.querySelector(
+			'meta[property="og:description"]'
+		);
+		if (ogDescription) {
+			ogDescription.setAttribute(
+				"content",
+				"Motion infographic about the disappearance of MH370 combining motion design, storytelling, and sound design for visual communication."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:description");
+			meta.content =
+				"Motion infographic about the disappearance of MH370 combining motion design, storytelling, and sound design for visual communication.";
+			document.head.appendChild(meta);
+		}
+
+		// Add keywords
+		const keywords = document.querySelector('meta[name="keywords"]');
+		if (keywords) {
+			keywords.setAttribute(
+				"content",
+				"MH370, motion design, infographic, storytelling, sound design, After Effects, motion graphics, Youssef Auassar, portfolio, visual communication"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "keywords";
+			meta.content =
+				"MH370, motion design, infographic, storytelling, sound design, After Effects, motion graphics, Youssef Auassar, portfolio, visual communication";
+			document.head.appendChild(meta);
+		}
 	}, []);
 	return (
 		<div className="min-h-screen">
 			<Navigation />
 			{/* Project Title and Categories */}
-			<section className="pt-32 sm:pt-40 pb-12 sm:pb-20">
+			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black mb-4 sm:mb-6">
 						<span
@@ -30,7 +90,7 @@ function MH370() {
 			</section>
 
 			{/* Hero Section with YouTube Video */}
-			<section className="pb-12 sm:pb-20">
+			<section className="pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="relative bg-gradient-to-b from-white to-gray-400 overflow-hidden">
 						{/* YouTube iframe centered */}
@@ -52,7 +112,7 @@ function MH370() {
 			</section>
 
 			{/* About MH370 Section */}
-			<section className="py-12 sm:py-20">
+			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
 						{/* Description */}
@@ -88,7 +148,7 @@ function MH370() {
 			</section>
 
 			{/* Process Moodboard Section */}
-			<section className="py-12 sm:py-20">
+			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-8 sm:mb-12">
 						<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-4 sm:mb-6">

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
@@ -19,17 +19,141 @@ function Homepage() {
 	const [currentText, setCurrentText] = useState("");
 	const [isDeleting, setIsDeleting] = useState(false);
 
-	const words = [
-		"Creative",
-		"Innovative",
-		"Intuitive",
-		"Impactful",
-		"Immersive",
-		"Visionary"
-	];
+	const words = useMemo(
+		() => [
+			"Creative",
+			"Innovative",
+			"Intuitive",
+			"Impactful",
+			"Immersive",
+			"Visionary"
+		],
+		[]
+	);
 
 	useEffect(() => {
-		document.title = "Youssef Auassar | Portfolio";
+		document.title = "Youssef Auassar | Digital Designer & Developer Portfolio";
+
+		// Add meta description
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				"content",
+				"Youssef Auassar - Digital Designer & Developer from Brussels. Specializing in UI/UX design, web development, and brand identity. View my portfolio of creative projects."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "description";
+			meta.content =
+				"Youssef Auassar - Digital Designer & Developer from Brussels. Specializing in UI/UX design, web development, and brand identity. View my portfolio of creative projects.";
+			document.head.appendChild(meta);
+		}
+
+		// Add Open Graph tags
+		const ogTitle = document.querySelector('meta[property="og:title"]');
+		if (ogTitle) {
+			ogTitle.setAttribute(
+				"content",
+				"Youssef Auassar | Digital Designer & Developer Portfolio"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:title");
+			meta.content = "Youssef Auassar | Digital Designer & Developer Portfolio";
+			document.head.appendChild(meta);
+		}
+
+		const ogDescription = document.querySelector(
+			'meta[property="og:description"]'
+		);
+		if (ogDescription) {
+			ogDescription.setAttribute(
+				"content",
+				"Digital Designer & Developer from Brussels. Specializing in UI/UX design, web development, and brand identity."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:description");
+			meta.content =
+				"Digital Designer & Developer from Brussels. Specializing in UI/UX design, web development, and brand identity.";
+			document.head.appendChild(meta);
+		}
+
+		const ogType = document.querySelector('meta[property="og:type"]');
+		if (ogType) {
+			ogType.setAttribute("content", "website");
+		} else {
+			const meta = document.createElement("meta");
+			meta.setAttribute("property", "og:type");
+			meta.content = "website";
+			document.head.appendChild(meta);
+		}
+
+		// Add Twitter Card tags
+		const twitterCard = document.querySelector('meta[name="twitter:card"]');
+		if (twitterCard) {
+			twitterCard.setAttribute("content", "summary_large_image");
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "twitter:card";
+			meta.content = "summary_large_image";
+			document.head.appendChild(meta);
+		}
+
+		const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+		if (twitterTitle) {
+			twitterTitle.setAttribute(
+				"content",
+				"Youssef Auassar | Digital Designer & Developer"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "twitter:title";
+			meta.content = "Youssef Auassar | Digital Designer & Developer";
+			document.head.appendChild(meta);
+		}
+
+		const twitterDescription = document.querySelector(
+			'meta[name="twitter:description"]'
+		);
+		if (twitterDescription) {
+			twitterDescription.setAttribute(
+				"content",
+				"Digital Designer & Developer from Brussels. Specializing in UI/UX design, web development, and brand identity."
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "twitter:description";
+			meta.content =
+				"Digital Designer & Developer from Brussels. Specializing in UI/UX design, web development, and brand identity.";
+			document.head.appendChild(meta);
+		}
+
+		// Add keywords
+		const keywords = document.querySelector('meta[name="keywords"]');
+		if (keywords) {
+			keywords.setAttribute(
+				"content",
+				"Youssef Auassar, digital designer, web developer, UI/UX designer, Brussels, portfolio, graphic design, front-end development, React, Figma, Adobe Creative Suite"
+			);
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "keywords";
+			meta.content =
+				"Youssef Auassar, digital designer, web developer, UI/UX designer, Brussels, portfolio, graphic design, front-end development, React, Figma, Adobe Creative Suite";
+			document.head.appendChild(meta);
+		}
+
+		// Add author
+		const author = document.querySelector('meta[name="author"]');
+		if (author) {
+			author.setAttribute("content", "Youssef Auassar");
+		} else {
+			const meta = document.createElement("meta");
+			meta.name = "author";
+			meta.content = "Youssef Auassar";
+			document.head.appendChild(meta);
+		}
 	}, []);
 
 	useEffect(() => {
