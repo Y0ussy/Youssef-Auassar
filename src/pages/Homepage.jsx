@@ -247,7 +247,7 @@ function Homepage() {
 						className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-4 md:mb-6"
 						style={{ fontFamily: "Poppins, sans-serif" }}
 					>
-						A Digital Designer
+						A Product Designer
 					</h1>
 					<h2
 						className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-6 md:mb-8"
@@ -278,13 +278,11 @@ function Homepage() {
 						}}
 					>
 						<span className="block sm:hidden">
-							I create impactful digital experiences that blend creativity and
-							strategy.
+							I shape digital experiences that blend creativity and innovation.
 						</span>
 						<span className="hidden sm:block">
-							I help businesses create a strong online presence with
-							user-friendly, impactful digital experiences that blend creativity
-							and strategy.
+							I shape digital experiences that blend creativity and innovation,
+							helping businesses create meaningful connections with their users.
 						</span>
 					</p>
 

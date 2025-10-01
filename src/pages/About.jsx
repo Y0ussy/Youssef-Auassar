@@ -167,8 +167,8 @@ function About() {
 								</span>
 							</h2>
 							<p className="text-base sm:text-lg md:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed">
-								A 22-year-old multimedia designer from Brussels, passionate
-								about creating digital experiences that are both beautiful and
+								A 22-year-old Product Designer from Brussels, passionate about
+								creating digital experiences that are both beautiful and
 								functional.
 							</p>
 							<div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
