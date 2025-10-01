@@ -32,7 +32,7 @@ function Homepage() {
 	);
 
 	useEffect(() => {
-		document.title = "Youssef Auassar | Digital Designer & Developer Portfolio";
+		document.title = "Youssef Auassar | Portfolio";
 
 		// Add meta description
 		const metaDescription = document.querySelector('meta[name="description"]');

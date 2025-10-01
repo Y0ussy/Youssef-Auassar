@@ -6,7 +6,7 @@ import gmailLogo from "../assets/gmail-logo.png";
 
 function Contact() {
 	useEffect(() => {
-		document.title = "Contact Youssef Auassar | Digital Designer & Developer";
+		document.title = "Youssef Auassar | My Contacts";
 
 		// Add meta description
 		const metaDescription = document.querySelector('meta[name="description"]');

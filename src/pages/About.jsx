@@ -17,7 +17,7 @@ function About() {
 	const toolsRef = useRef(null);
 
 	useEffect(() => {
-		document.title = "About Youssef Auassar | Digital Designer & Developer";
+		document.title = "Youssef Auassar | About Me";
 
 		// Add meta description
 		const metaDescription = document.querySelector('meta[name="description"]');

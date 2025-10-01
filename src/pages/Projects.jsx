@@ -10,7 +10,6 @@ import {
 } from "react-icons/fa";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import logo from "../assets/logo.svg";
 import studieMatchImage from "../assets/studie-match.png";
 import fiestaCulturaImage from "../assets/fiesta-cultura.png";
 import debibImage from "../assets/debib.png";
@@ -21,7 +20,7 @@ function Projects() {
 	const [activeFilter, setActiveFilter] = useState("all");
 
 	useEffect(() => {
-		document.title = "Projects | Youssef Auassar Portfolio";
+		document.title = "Youssef Auassar | Projects Showcase";
 
 		// Add meta description
 		const metaDescription = document.querySelector('meta[name="description"]');
