@@ -69,7 +69,7 @@ function Navigation() {
 						<a
 							href={resumePDF}
 							download="Youssef_Auassar_Resume.pdf"
-							className="bg-black text-white px-6 py-3 rounded-full text-sm md:text-base hover:bg-gray-800 transition-colors duration-300"
+							className="bg-black text-white px-6 py-3 rounded-full text-sm md:text-base hover:bg-[#2c2c2c] transition-colors duration-300"
 							style={{ fontFamily: "Poppins, sans-serif", fontWeight: "400" }}
 						>
 							My Resume

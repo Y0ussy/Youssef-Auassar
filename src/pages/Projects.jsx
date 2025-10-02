@@ -188,7 +188,7 @@ function Projects() {
 								className={`px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm md:text-base font-normal transition-all duration-300 flex items-center gap-2 ${
 									activeFilter === filter.id
 										? "bg-black text-white"
-										: "bg-white border border-black text-black hover:bg-gray-50"
+										: "bg-white border border-black text-black hover:bg-[#eeeeee]"
 								}`}
 								style={{ fontFamily: "Poppins, sans-serif" }}
 							>

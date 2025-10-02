@@ -255,7 +255,7 @@ function Homepage() {
 					>
 						with a{" "}
 						<span
-							className="inline-block min-w-[150px] sm:min-w-[200px] text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600"
+							className="inline-block min-w-[150px] sm:min-w-[200px] text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-gray-500 to-black"
 							style={{
 								fontFamily: "Playfair Display, serif",
 								fontStyle: "italic",
@@ -290,7 +290,7 @@ function Homepage() {
 					<div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-4">
 						<Link
 							to="/contact"
-							className="bg-black text-white pl-3 pr-6 py-3 rounded-full flex items-center text-sm md:text-base hover:bg-gray-800 transition-colors duration-300 w-full sm:w-auto justify-center"
+							className="bg-black text-white pl-3 pr-6 py-3 rounded-full flex items-center text-sm md:text-base hover:bg-[#2c2c2c] transition-colors duration-300 w-full sm:w-auto justify-center"
 						>
 							<img
 								src={faceImage}
@@ -305,7 +305,7 @@ function Homepage() {
 						</Link>
 						<Link
 							to="/projects"
-							className="border-2 border-black text-black px-6 py-3 rounded-full text-sm md:text-base hover:bg-black hover:text-white transition-colors duration-300 w-full sm:w-auto text-center"
+							className="border-2 border-black text-black px-6 py-3 rounded-full text-sm md:text-base hover:bg-[#eeeeee] transition-colors duration-300 w-full sm:w-auto text-center"
 						>
 							<span
 								style={{ fontFamily: "Poppins, sans-serif", fontWeight: "400" }}

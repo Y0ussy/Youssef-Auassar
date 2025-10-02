@@ -6,7 +6,7 @@ import gmailLogo from "../assets/gmail-logo.png";
 
 function Contact() {
 	useEffect(() => {
-		document.title = "Youssef Auassar | My Contacts";
+		document.title = "Youssef Auassar | Get in Touch!";
 
 		// Add meta description
 		const metaDescription = document.querySelector('meta[name="description"]');
@@ -77,20 +77,11 @@ function Contact() {
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					{/* Main Title */}
 					<div className="text-center mb-16 sm:mb-20">
-						<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black">
-							<span
-								style={{
-									fontFamily: "Playfair Display, serif",
-									fontWeight: "normal",
-									fontStyle: "italic"
-								}}
-							>
-								My
-							</span>{" "}
+						<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-black">
 							<span
 								style={{ fontFamily: "Poppins, sans-serif", fontWeight: "700" }}
 							>
-								Contacts
+								Get in Touch!
 							</span>
 						</h1>
 					</div>

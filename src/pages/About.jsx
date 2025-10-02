@@ -2,6 +2,9 @@ import { useEffect, useRef } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import profileImage from "../assets/porfiiil.png";
+import casasoftLogo from "../assets/Casasoft Ltd.-logo-1618477327.jpg";
+import ehcLogo from "../assets/ehb.png";
+import buildingEhb from "../assets/buildingehb.jpg";
 import htmlIcon from "../assets/htmlll.png";
 import cssIcon from "../assets/csssss.svg";
 import reactIcon from "../assets/react_original_wordmark_logo_icon_146375.png";
@@ -13,7 +16,6 @@ import afterEffectsIcon from "../assets/aftereffecttts.png";
 function About() {
 	const heroRef = useRef(null);
 	const aboutTextRef = useRef(null);
-	const educationRef = useRef(null);
 	const toolsRef = useRef(null);
 
 	useEffect(() => {
@@ -94,7 +96,7 @@ function About() {
 			});
 		}, observerOptions);
 
-		const refs = [heroRef, aboutTextRef, educationRef, toolsRef];
+		const refs = [heroRef, aboutTextRef, toolsRef];
 		refs.forEach((ref) => {
 			if (ref.current) {
 				observer.observe(ref.current);
@@ -113,149 +115,235 @@ function About() {
 	return (
 		<div className="min-h-screen">
 			<Navigation />
-
-			{/* About Header */}
-			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					{/* Main Title */}
-					<div className="text-center mb-8 sm:mb-12">
-						<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black">
-							<span
+			{/* About Content */}
+			<section className="pt-24 sm:pt-32 pb-20">
+				<div
+					className="mx-auto px-4 sm:px-6 lg:px-8 text-center"
+					style={{ maxWidth: "1200px" }}
+				>
+					{/* Profile Image */}
+					<div className="mb-8">
+						<div className="w-56 h-56 mx-auto rounded-full overflow-hidden">
+							<img
+								src={profileImage}
+								alt="Youssef Auassar"
+								className="w-full h-full object-cover scale-155"
 								style={{
-									fontFamily: "Playfair Display, serif",
-									fontWeight: "normal",
-									fontStyle: "italic"
+									objectPosition: "90% center",
+									transform: "translateY(36px)"
 								}}
-							>
-								About
-							</span>{" "}
-							<span
-								style={{ fontFamily: "Poppins, sans-serif", fontWeight: "700" }}
-							>
-								Me
-							</span>
+							/>
+						</div>
+					</div>
+
+					{/* Name and Title */}
+					<div className="mb-8">
+						<h1
+							className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-2"
+							style={{ fontFamily: "Poppins, sans-serif" }}
+						>
+							Youssef Auassar
 						</h1>
+						<p
+							className="text-lg sm:text-xl text-gray-600"
+							style={{ fontFamily: "Poppins, sans-serif" }}
+						>
+							Product Designer
+						</p>
+					</div>
+
+					{/* Skills Tags */}
+					<div className="flex flex-wrap gap-3 justify-center mb-12">
+						<div className="bg-white border border-[#e7e7e7] rounded-full px-4 py-2 flex items-center gap-2">
+							<span className="text-lg">👑</span>
+							<span className="text-sm font-medium text-black">
+								Product Design
+							</span>
+						</div>
+						<div className="bg-white border border-[#e7e7e7] rounded-full px-4 py-2 flex items-center gap-2">
+							<span className="text-lg">🖊️</span>
+							<span className="text-sm font-medium text-black">UI Design</span>
+						</div>
+						<div className="bg-white border border-[#e7e7e7] rounded-full px-4 py-2 flex items-center gap-2">
+							<span className="text-lg">📦</span>
+							<span className="text-sm font-medium text-black">UX Design</span>
+						</div>
+						<div className="bg-white border border-[#e7e7e7] rounded-full px-4 py-2 flex items-center gap-2">
+							<span className="text-lg">🖼️</span>
+							<span className="text-sm font-medium text-black">
+								Graphic Design
+							</span>
+						</div>
+						<div className="bg-white border border-[#e7e7e7] rounded-full px-4 py-2 flex items-center gap-2">
+							<span className="text-lg">🎈</span>
+							<span className="text-sm font-medium text-black">
+								Brand Identity
+							</span>
+						</div>
+					</div>
+
+					{/* Bio */}
+					<div className="mx-auto mb-12" style={{ maxWidth: "1200px" }}>
+						<p
+							className="text-xl sm:text-2xl text-black leading-relaxed"
+							style={{ fontFamily: "Poppins, sans-serif" }}
+						>
+							I am a Multimedia Creative Technology graduate, with a passion for
+							creating engaging and user-friendly digital products. I have
+							developed my skills in Figma, User Experience Design, and User
+							Interface Design through multiple projects, both academic and
+							professional.
+						</p>
+					</div>
+
+					{/* Career Highlights Section */}
+					<div className="max-w-7xl mx-auto">
+						<div className="overflow-hidden">
+							{/* Career Highlights Header */}
+							<div className="text-center mb-10 pt-8">
+								<div className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white border border-[#e7e7e7] rounded-full mb-4">
+									<span className="text-lg">👨‍🎓</span>
+									<span className="text-lg">→</span>
+									<span
+										className="text-lg font-medium text-black"
+										style={{ fontFamily: "Poppins, sans-serif" }}
+									>
+										Career Highlights
+									</span>
+									<span className="text-lg">→</span>
+									<span className="text-lg">💼</span>
+								</div>
+							</div>
+
+							{/* Content */}
+							<div className="flex flex-col lg:flex-row items-center">
+								{/* Left: Building Image */}
+								<div className="lg:w-1/2 p-6">
+									<div className="relative">
+										<img
+											src={buildingEhb}
+											alt="Erasmushogeschool Brussel Building"
+											className="w-full h-96 object-cover"
+										/>
+										{/* EHb Logo overlay */}
+										<div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-3">
+											<img
+												src={ehcLogo}
+												alt="Erasmushogeschool Brussel Logo"
+												className="w-20 h-20 object-contain"
+											/>
+										</div>
+									</div>
+								</div>
+
+								{/* Right: Text Content */}
+								<div className="lg:w-1/2 p-6">
+									{/* University and Degree */}
+									<div className="text-center mb-6">
+										<span className="text-6xl mb-4 block">🎓</span>
+										<h3
+											className="text-2xl font-bold text-black mb-2"
+											style={{ fontFamily: "Poppins, sans-serif" }}
+										>
+											Erasmushogeschool Brussel
+										</h3>
+										<p
+											className="text-lg text-gray-600 mb-2"
+											style={{ fontFamily: "Poppins, sans-serif" }}
+										>
+											Bachelor Multimedia Creative Technology
+										</p>
+										<p className="text-lg text-gray-400 mb-6">2022 - 2025</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* Professional Experience Section */}
+			<section className="pt-2 sm:pt-0 pb-12 sm:pb-20">
+				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="text-center mb-12">
+						<div className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white border border-[#e7e7e7] rounded-full mb-4">
+							<span className="text-lg">🎨</span>
+							<span className="text-lg">→</span>
+							<span
+								className="text-lg font-medium text-black"
+								style={{ fontFamily: "Poppins, sans-serif" }}
+							>
+								Professional Experience
+							</span>
+							<span className="text-lg">→</span>
+							<span className="text-lg">💻</span>
+						</div>
+					</div>
+
+					<div className="grid md:grid-cols-2 gap-8">
+						{/* Casasoft Experience */}
+						<div className="bg-gradient-to-b from-white to-[#fafafa] p-16 sm:p-20 border border-[#e7e7e7] rounded-lg">
+							<div className="text-center">
+								<div className="mb-8">
+									<img
+										src={casasoftLogo}
+										alt="Casasoft Logo"
+										className="w-32 h-32 object-contain mx-auto mb-4"
+									/>
+
+									<h4
+										className="text-xl font-bold text-black mb-2"
+										style={{ fontFamily: "Poppins, sans-serif" }}
+									>
+										Frontend Developer Intern
+									</h4>
+									<p className="text-sm text-gray-400 mb-8">
+										01/2025 - 04/2025
+									</p>
+								</div>
+								<p className="text-sm text-gray-700 leading-relaxed">
+									Working on existing platform Mamori, fixing bugs and improving
+									the interface to enhance user experience and functionality.
+								</p>
+							</div>
+						</div>
+
+						{/* Next Opportunity */}
+						<div className="bg-gradient-to-b from-white to-[#fafafa] p-16 sm:p-20 border border-[#e7e7e7] rounded-lg">
+							<div className="text-center mb-8">
+								<div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gray-300 to-gray-400 rounded-xl flex items-center justify-center">
+									<span className="text-3xl">🚀</span>
+								</div>
+								<h3
+									className="text-lg font-medium text-gray-500 mb-3"
+									style={{ fontFamily: "Poppins, sans-serif" }}
+								>
+									Coming Soon
+								</h3>
+								<h4
+									className="text-xl font-bold text-gray-700 mb-3"
+									style={{ fontFamily: "Poppins, sans-serif" }}
+								>
+									Next Opportunity
+								</h4>
+								<p className="text-sm text-gray-400 mb-8">Future</p>
+							</div>
+							<p className="text-sm text-gray-500 leading-relaxed text-center">
+								Always excited for new challenges and opportunities to grow as a
+								designer and developer.
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			{/* About Content */}
-			<section className="pt-4 sm:pt-6 pb-20">
-				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-					{/* Hero Section with Image and Intro */}
-					<div
-						ref={heroRef}
-						className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-16 sm:mb-20 opacity-0 translate-y-8 transition-all duration-1000 ease-out -mt-8 sm:-mt-12"
-					>
-						<div className="order-2 lg:order-1">
-							<div className="w-full h-64 sm:h-80 overflow-hidden">
-								<img
-									src={profileImage}
-									alt="Youssef Auassar"
-									className="w-full h-full object-cover"
-								/>
-							</div>
-						</div>
-						<div className="order-1 lg:order-2 text-center lg:text-left">
-							<h2
-								className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6"
-								style={{ fontFamily: "Poppins, sans-serif" }}
-							>
-								Hi, I'm{" "}
-								<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
-									Youssef
-								</span>
-							</h2>
-							<p className="text-base sm:text-lg md:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed">
-								A 22-year-old Product Designer from Brussels, passionate about
-								creating digital experiences that are both beautiful and
-								functional.
-							</p>
-							<div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
-								<span className="px-3 sm:px-4 py-2 bg-gradient-to-r from-pink-100 to-pink-200 text-pink-800 text-xs sm:text-sm font-medium rounded-full border border-pink-300">
-									UI/UX Design
-								</span>
-								<span className="px-3 sm:px-4 py-2 bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800 text-xs sm:text-sm font-medium rounded-full border border-blue-300">
-									Front-end Development
-								</span>
-								<span className="px-3 sm:px-4 py-2 bg-gradient-to-r from-green-100 to-green-200 text-green-800 text-xs sm:text-sm font-medium rounded-full border border-green-300">
-									Graphic Design
-								</span>
-							</div>
-						</div>
-					</div>
-
-					{/* About Text Section */}
-					<div
-						ref={aboutTextRef}
-						className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
-					>
-						<p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 px-4">
-							I specialize in <strong>UI/UX design</strong> and have expertise
-							in brand design, marketing and advertising design, front-end web
-							development, and motion design. My passion lies in creating
-							digital experiences that are both beautiful and functional.
-						</p>
-						<p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed px-4">
-							I'm fluent in <strong>Dutch</strong> and <strong>English</strong>,
-							with a good working knowledge of <strong>French</strong>, which
-							allows me to work effectively in diverse, multilingual
-							environments.
-						</p>
-					</div>
-
-					{/* Education Section */}
-					<div
-						ref={educationRef}
-						className="max-w-4xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out"
-					>
-						<div className="bg-gradient-to-br from-blue-50 to-purple-50 p-4 sm:p-6 md:p-8">
-							<div className="flex items-center mb-4 sm:mb-6">
-								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mr-3 sm:mr-4 rounded-xl">
-									<svg
-										className="w-5 h-5 sm:w-6 sm:h-6 text-white"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											strokeWidth={2}
-											d="M12 14l9-5-9-5-9 5 9 5z"
-										/>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											strokeWidth={2}
-											d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-										/>
-									</svg>
-								</div>
-								<h3
-									className="text-xl sm:text-2xl font-bold"
-									style={{ fontFamily: "Poppins, sans-serif" }}
-								>
-									Education
-								</h3>
-							</div>
-							<p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-								I graduated from <strong>Erasmushogeschool Brussel</strong> with
-								a Bachelor's degree in{" "}
-								<strong>Multimedia Creative Technology</strong>, which I
-								completed in three years. This program provided me with a solid
-								foundation in digital design, web development, and multimedia
-								production.
-							</p>
-						</div>
-					</div>
-
-					{/* Tools Section */}
+			{/* Tools Section */}
+			<section className="py-12 sm:py-2">
+				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div
 						ref={toolsRef}
-						className="max-w-4xl mx-auto mt-12 sm:mt-16 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+						className="opacity-0 translate-y-8 transition-all duration-1000 ease-out"
 					>
-						<div className="text-center mb-8 sm:mb-12">
+						<div className="text-center mb-12">
 							<h3
 								className="text-xl sm:text-2xl font-bold"
 								style={{ fontFamily: "Poppins, sans-serif" }}
@@ -264,7 +352,7 @@ function About() {
 							</h3>
 						</div>
 						<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6">
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-orange-50 hover:shadow-md">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl">
 								<img
 									src={htmlIcon}
 									alt="HTML"
@@ -274,7 +362,7 @@ function About() {
 									HTML
 								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-blue-50 hover:shadow-md">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl ">
 								<img
 									src={cssIcon}
 									alt="CSS"
@@ -284,7 +372,7 @@ function About() {
 									CSS
 								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-cyan-50 hover:shadow-md">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl ">
 								<img
 									src={reactIcon}
 									alt="React"
@@ -294,7 +382,7 @@ function About() {
 									React
 								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-purple-50 hover:shadow-md">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl ">
 								<img
 									src={figmaIcon}
 									alt="Figma"
@@ -304,7 +392,7 @@ function About() {
 									Figma
 								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-orange-50 hover:shadow-md">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl ">
 								<img
 									src={illustratorIcon}
 									alt="Illustrator"
@@ -314,7 +402,7 @@ function About() {
 									Illustrator
 								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-blue-50 hover:shadow-md">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl ">
 								<img
 									src={photoshopIcon}
 									alt="Photoshop"
@@ -324,7 +412,7 @@ function About() {
 									Photoshop
 								</p>
 							</div>
-							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl hover:bg-purple-50 hover:shadow-md">
+							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl ">
 								<img
 									src={afterEffectsIcon}
 									alt="After Effects"
@@ -338,7 +426,6 @@ function About() {
 					</div>
 				</div>
 			</section>
-
 			<Footer />
 		</div>
 	);
