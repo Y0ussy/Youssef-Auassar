@@ -238,9 +238,14 @@ function StudieMatch() {
 			{/* Call to Action */}
 			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<button className="bg-white border-2 border-black text-black px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-semibold hover:bg-black hover:text-white transition-colors duration-300">
+					<a
+						href="https://studie-match.vercel.app/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-block bg-white border-2 border-black text-black px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-semibold hover:bg-black hover:text-white transition-colors duration-300"
+					>
 						Bezoek website
-					</button>
+					</a>
 				</div>
 			</section>
 			<Footer />
