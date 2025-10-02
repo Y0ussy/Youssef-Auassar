@@ -244,7 +244,7 @@ function StudieMatch() {
 						rel="noopener noreferrer"
 						className="inline-block bg-white border-2 border-black text-black px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-semibold hover:bg-black hover:text-white transition-colors duration-300"
 					>
-						Bezoek website
+						Website Link
 					</a>
 				</div>
 			</section>
