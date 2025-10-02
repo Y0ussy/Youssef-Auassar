@@ -114,6 +114,33 @@ function About() {
 
 	return (
 		<div className="min-h-screen">
+			<style jsx>{`
+				@keyframes heartbeat {
+					0% {
+						box-shadow: inset 0 0 20px rgba(34, 197, 94, 0.2),
+							0 4px 8px rgba(0, 0, 0, 0.1);
+					}
+					25% {
+						box-shadow: inset 0 0 25px rgba(34, 197, 94, 0.4),
+							0 4px 8px rgba(0, 0, 0, 0.1);
+					}
+					50% {
+						box-shadow: inset 0 0 20px rgba(34, 197, 94, 0.2),
+							0 4px 8px rgba(0, 0, 0, 0.1);
+					}
+					75% {
+						box-shadow: inset 0 0 25px rgba(34, 197, 94, 0.4),
+							0 4px 8px rgba(0, 0, 0, 0.1);
+					}
+					100% {
+						box-shadow: inset 0 0 20px rgba(34, 197, 94, 0.2),
+							0 4px 8px rgba(0, 0, 0, 0.1);
+					}
+				}
+				.heartbeat-glow {
+					animation: heartbeat 2s ease-in-out infinite;
+				}
+			`}</style>
 			<Navigation />
 			{/* About Content */}
 			<section className="pt-24 sm:pt-32 pb-20">
@@ -122,12 +149,12 @@ function About() {
 					style={{ maxWidth: "1200px" }}
 				>
 					{/* Profile Image */}
-					<div className="mb-8">
-						<div className="w-56 h-56 mx-auto rounded-full overflow-hidden">
+					<div className="mb-6 sm:mb-8">
+						<div className="w-56 h-56 sm:w-64 sm:h-64 mx-auto rounded-full overflow-hidden">
 							<img
 								src={profileImage}
 								alt="Youssef Auassar"
-								className="w-full h-full object-cover scale-155"
+								className="w-full h-full object-cover scale-150 sm:scale-155"
 								style={{
 									objectPosition: "90% center",
 									transform: "translateY(36px)"
@@ -137,15 +164,15 @@ function About() {
 					</div>
 
 					{/* Name and Title */}
-					<div className="mb-8">
+					<div className="mb-6 sm:mb-8">
 						<h1
-							className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-2"
+							className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-2"
 							style={{ fontFamily: "Poppins, sans-serif" }}
 						>
 							Youssef Auassar
 						</h1>
 						<p
-							className="text-lg sm:text-xl text-gray-600"
+							className="text-base sm:text-lg md:text-xl text-gray-600"
 							style={{ fontFamily: "Poppins, sans-serif" }}
 						>
 							Product Designer
@@ -153,7 +180,7 @@ function About() {
 					</div>
 
 					{/* Skills Tags */}
-					<div className="flex flex-wrap gap-3 justify-center mb-12">
+					<div className="flex flex-wrap gap-2 sm:gap-3 justify-center mb-8 sm:mb-12 px-4">
 						<div className="bg-white border border-[#e7e7e7] rounded-full px-4 py-2 flex items-center gap-2">
 							<span className="text-lg">👑</span>
 							<span className="text-sm font-medium text-black">
@@ -183,9 +210,12 @@ function About() {
 					</div>
 
 					{/* Bio */}
-					<div className="mx-auto mb-12" style={{ maxWidth: "1200px" }}>
+					<div
+						className="mx-auto mb-8 sm:mb-12 px-4"
+						style={{ maxWidth: "1200px" }}
+					>
 						<p
-							className="text-xl sm:text-2xl text-black leading-relaxed"
+							className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed"
 							style={{ fontFamily: "Poppins, sans-serif" }}
 						>
 							I am a Multimedia Creative Technology graduate, with a passion for
@@ -218,12 +248,12 @@ function About() {
 							{/* Content */}
 							<div className="flex flex-col lg:flex-row items-center">
 								{/* Left: Building Image */}
-								<div className="lg:w-1/2 p-6">
+								<div className="lg:w-1/2 p-4 sm:p-6">
 									<div className="relative">
 										<img
 											src={buildingEhb}
 											alt="Erasmushogeschool Brussel Building"
-											className="w-full h-96 object-cover"
+											className="w-full h-64 sm:h-80 md:h-96 object-cover"
 										/>
 										{/* EHb Logo overlay */}
 										<div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-3">
@@ -279,9 +309,9 @@ function About() {
 						</div>
 					</div>
 
-					<div className="grid md:grid-cols-2 gap-8">
+					<div className="grid md:grid-cols-2 gap-6 md:gap-8">
 						{/* Casasoft Experience */}
-						<div className="bg-gradient-to-b from-white to-[#fafafa] p-16 sm:p-20 border border-[#e7e7e7] rounded-lg">
+						<div className="bg-gradient-to-b from-white to-[#fafafa] p-8 sm:p-16 md:p-20 border border-[#e7e7e7] rounded-lg">
 							<div className="text-center">
 								<div className="mb-8">
 									<img
@@ -308,10 +338,10 @@ function About() {
 						</div>
 
 						{/* Next Opportunity */}
-						<div className="bg-gradient-to-b from-white to-[#fafafa] p-16 sm:p-20 border border-[#e7e7e7] rounded-lg">
+						<div className="bg-gradient-to-b from-white to-[#fafafa] p-16 sm:p-20 border border-[#e7e7e7] rounded-lg heartbeat-glow">
 							<div className="text-center mb-8">
-								<div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gray-300 to-gray-400 rounded-xl flex items-center justify-center">
-									<span className="text-3xl">🚀</span>
+								<div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full flex items-center justify-center">
+									<span className="text-3xl font-bold text-white">?</span>
 								</div>
 								<h3
 									className="text-lg font-medium text-gray-500 mb-3"
@@ -351,7 +381,7 @@ function About() {
 								Tech Stack
 							</h3>
 						</div>
-						<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6">
+						<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 sm:gap-4 md:gap-6">
 							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl">
 								<img
 									src={htmlIcon}
@@ -418,7 +448,7 @@ function About() {
 									alt="After Effects"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium text-purple-700">
+								<p className="text-xs font-medium text-purple-700 whitespace-nowrap">
 									After Effects
 								</p>
 							</div>
@@ -426,7 +456,9 @@ function About() {
 					</div>
 				</div>
 			</section>
-			<Footer />
+			<div className="pt-12">
+				<Footer />
+			</div>
 		</div>
 	);
 }

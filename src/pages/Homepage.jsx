@@ -263,7 +263,7 @@ function Homepage() {
 							}}
 						>
 							{currentText}
-							<span className="animate-pulse text-blue-500">|</span>
+							<span className="animate-pulse text-black">|</span>
 						</span>{" "}
 						Mind
 					</h2>
