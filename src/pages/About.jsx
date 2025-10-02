@@ -157,7 +157,7 @@ function About() {
 								className="w-full h-full object-cover scale-150 sm:scale-155"
 								style={{
 									objectPosition: "90% center",
-									transform: "translateY(36px)"
+									transform: "translateY(40px)"
 								}}
 							/>
 						</div>
