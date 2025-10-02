@@ -167,7 +167,7 @@ function StudieMatch() {
 						{/* Home Page GIF */}
 						<div className="flex justify-center">
 							<img
-								src="/src/assets/studiematch-home-ezgif.com-video-to-gif-converter.gif"
+								src="/studiematch-home-ezgif.com-video-to-gif-converter.gif"
 								alt="StudieMatch Home Page Demo"
 								className="w-full max-w-xl sm:max-w-2xl"
 							/>
@@ -176,7 +176,7 @@ function StudieMatch() {
 						{/* Test GIF */}
 						<div className="flex justify-center">
 							<img
-								src="/src/assets/studiematch-test-ezgif.com-video-to-gif-converter.gif"
+								src="/studiematch-test-ezgif.com-video-to-gif-converter.gif"
 								alt="StudieMatch Test Demo"
 								className="w-full max-w-xl sm:max-w-2xl"
 							/>
@@ -188,7 +188,7 @@ function StudieMatch() {
 						{/* Types GIF */}
 						<div className="flex justify-center">
 							<img
-								src="/src/assets/studiematch-types-ezgif.com-video-to-gif-converter.gif"
+								src="/studiematch-types-ezgif.com-video-to-gif-converter.gif"
 								alt="StudieMatch Personality Types Demo"
 								className="w-full max-w-xl sm:max-w-2xl"
 							/>
@@ -197,7 +197,7 @@ function StudieMatch() {
 						{/* Filter GIF */}
 						<div className="flex justify-center">
 							<img
-								src="/src/assets/studiematch-filter-ezgif.com-video-to-gif-converter.gif"
+								src="/studiematch-filter-ezgif.com-video-to-gif-converter.gif"
 								alt="StudieMatch Filter Demo"
 								className="w-full max-w-xl sm:max-w-2xl"
 							/>
