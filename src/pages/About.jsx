@@ -157,7 +157,7 @@ function About() {
 								className="w-full h-full object-cover scale-150 sm:scale-155"
 								style={{
 									objectPosition: "90% center",
-									transform: "translateY(40px)"
+									transform: "translateY(35px)"
 								}}
 							/>
 						</div>
@@ -378,7 +378,7 @@ function About() {
 								className="text-xl sm:text-2xl font-bold"
 								style={{ fontFamily: "Poppins, sans-serif" }}
 							>
-								Tech Stack
+								My Toolkit
 							</h3>
 						</div>
 						<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 sm:gap-4 md:gap-6">
@@ -388,7 +388,7 @@ function About() {
 									alt="HTML"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium text-orange-700">
+								<p className="text-xs sm:text-sm font-medium text-black">
 									HTML
 								</p>
 							</div>
@@ -398,9 +398,7 @@ function About() {
 									alt="CSS"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium text-blue-700">
-									CSS
-								</p>
+								<p className="text-xs sm:text-sm font-medium text-black">CSS</p>
 							</div>
 							<div className="text-center hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer p-3 rounded-xl ">
 								<img
@@ -408,7 +406,7 @@ function About() {
 									alt="React"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium text-cyan-700">
+								<p className="text-xs sm:text-sm font-medium text-black">
 									React
 								</p>
 							</div>
@@ -418,7 +416,7 @@ function About() {
 									alt="Figma"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium text-purple-700">
+								<p className="text-xs sm:text-sm font-medium text-black">
 									Figma
 								</p>
 							</div>
@@ -428,7 +426,7 @@ function About() {
 									alt="Illustrator"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium text-orange-700">
+								<p className="text-xs sm:text-sm font-medium text-black">
 									Illustrator
 								</p>
 							</div>
@@ -438,7 +436,7 @@ function About() {
 									alt="Photoshop"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs sm:text-sm font-medium text-blue-700">
+								<p className="text-xs sm:text-sm font-medium text-black">
 									Photoshop
 								</p>
 							</div>
@@ -448,7 +446,7 @@ function About() {
 									alt="After Effects"
 									className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 object-contain"
 								/>
-								<p className="text-xs font-medium text-purple-700 whitespace-nowrap">
+								<p className="text-xs font-medium text-black whitespace-nowrap">
 									After Effects
 								</p>
 							</div>

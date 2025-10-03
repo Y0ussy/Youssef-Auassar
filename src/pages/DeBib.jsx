@@ -121,10 +121,10 @@ function DeBib() {
 	};
 
 	return (
-		<div className="min-h-screen">
+		<div className="min-h-screen bg-white">
 			<Navigation />
 			{/* Project Title and Categories */}
-			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
+			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black mb-4 sm:mb-6">
 						<span
@@ -142,17 +142,21 @@ function DeBib() {
 				</div>
 			</section>
 			{/* Hero Section */}
-			<section className="pb-8 sm:pb-12">
+			<section className="pb-8 sm:pb-12 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<img
 						src={bibappImage}
 						alt="De Bib App Banner"
 						className="w-full h-auto object-contain"
+						onError={(e) => {
+							console.error("Image failed to load:", bibappImage);
+							e.target.style.display = "none";
+						}}
 					/>
 				</div>
 			</section>
 			{/* About De Bib Section */}
-			<section className="py-8 sm:py-12">
+			<section className="py-8 sm:py-12 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-left">
 						<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-6 sm:mb-8">
@@ -187,7 +191,7 @@ function DeBib() {
 			</section>
 
 			{/* Design Section */}
-			<section className="pt-8 sm:pt-12 pb-4">
+			<section className="pt-8 sm:pt-12 pb-4 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex items-center justify-between mb-8 sm:mb-12">
 						<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black">
@@ -221,6 +225,10 @@ function DeBib() {
 										src={image}
 										alt={`De Bib Design ${index + 1}`}
 										className="w-64 sm:w-80 h-auto object-contain pointer-events-none"
+										onError={(e) => {
+											console.error("Carousel image failed to load:", image);
+											e.target.style.display = "none";
+										}}
 									/>
 								</div>
 							))}
