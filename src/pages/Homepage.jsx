@@ -1,5 +1,6 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import figmaLogo from "../assets/Figma-logo.svg.png";
@@ -18,6 +19,9 @@ function Homepage() {
 	const [currentWordIndex, setCurrentWordIndex] = useState(0);
 	const [currentText, setCurrentText] = useState("");
 	const [isDeleting, setIsDeleting] = useState(false);
+
+	// Ref for greeting animation
+	const greetingRef = useRef(null);
 
 	const words = useMemo(
 		() => [
@@ -207,6 +211,26 @@ function Homepage() {
 		return () => clearTimeout(timeout);
 	}, [currentText, isDeleting, currentWordIndex, words]);
 
+	// GSAP fade-up animation for greeting
+	useEffect(() => {
+		if (!isLoading && greetingRef.current) {
+			// Set initial state
+			gsap.set(greetingRef.current, {
+				opacity: 0,
+				y: 30
+			});
+
+			// Animate in
+			gsap.to(greetingRef.current, {
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				ease: "power2.out",
+				delay: 0.2
+			});
+		}
+	}, [isLoading]);
+
 	const handleLoadingComplete = useCallback(() => {
 		console.log("handleLoadingComplete called, setting isLoading to false");
 		setIsLoading(false);
@@ -226,7 +250,10 @@ function Homepage() {
 			<section className="pt-32 md:pt-40 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8">
 				<div className="max-w-4xl mx-auto text-center">
 					{/* Greeting */}
-					<div className="flex items-center justify-center mb-4 md:mb-6">
+					<div
+						ref={greetingRef}
+						className="flex items-center justify-center mb-4 md:mb-6"
+					>
 						<div className="text-xl md:text-2xl mr-2 md:mr-3 animate-bounce">
 							👋
 						</div>
