@@ -16,7 +16,6 @@ import afterEffectsIcon from "../assets/aftereffecttts.png";
 function About() {
 	const heroRef = useRef(null);
 	const aboutTextRef = useRef(null);
-	const toolsRef = useRef(null);
 
 	useEffect(() => {
 		document.title = "Youssef Auassar | About Me";
@@ -96,7 +95,7 @@ function About() {
 			});
 		}, observerOptions);
 
-		const refs = [heroRef, aboutTextRef, toolsRef];
+		const refs = [heroRef, aboutTextRef];
 		refs.forEach((ref) => {
 			if (ref.current) {
 				observer.observe(ref.current);
@@ -143,7 +142,7 @@ function About() {
 			`}</style>
 			<Navigation />
 			{/* About Content */}
-			<section className="pt-24 sm:pt-32 pb-20">
+			<section className="pt-8 sm:pt-12 pb-20">
 				<div
 					className="mx-auto px-4 sm:px-6 lg:px-8 text-center"
 					style={{ maxWidth: "1200px" }}
@@ -369,10 +368,7 @@ function About() {
 			{/* Tools Section */}
 			<section className="py-12 sm:py-2">
 				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div
-						ref={toolsRef}
-						className="opacity-0 translate-y-8 transition-all duration-1000 ease-out"
-					>
+					<div>
 						<div className="text-center mb-12">
 							<h3
 								className="text-xl sm:text-2xl font-bold"

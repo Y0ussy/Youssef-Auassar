@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import studieLogo from "../assets/studie-logo.png";
-import studieMatchImage from "../assets/studiematch-big.png";
+import bannerStudieMatch from "../assets/banner-studiematch.png";
+import showcaseStudie from "../assets/showcase-studie.png";
+import arrowUpBtn from "../assets/arow-up-btn.svg";
 
 function StudieMatch() {
 	useEffect(() => {
@@ -72,7 +73,7 @@ function StudieMatch() {
 		<div className="min-h-screen">
 			<Navigation />
 			{/* Project Title and Categories */}
-			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
+			<section className="pt-8 sm:pt-12 pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black mb-4 sm:mb-6">
 						<span
@@ -81,144 +82,180 @@ function StudieMatch() {
 								fontWeight: "700"
 							}}
 						>
-							Studie Match
+							Studie Match - Study Choice Website
 						</span>
 					</h1>
 					<p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700">
-						Web Development • Website design, UX research, Visual identity
+						Education | UI & UX Design, Development
 					</p>
 				</div>
 			</section>
 			{/* Hero Section */}
 			<section className="pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="relative bg-gradient-to-t from-[#50AABE] to-[#DBF6F4] overflow-hidden">
-						{/* Main image centered */}
-						<div className="flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-16">
-							<img
-								src={studieMatchImage}
-								alt="Studie Match Website"
-								className="w-full sm:w-3/4 h-auto object-contain transition-transform duration-300 hover:scale-102"
-							/>
-						</div>
+					<div className="flex items-center justify-center">
+						<img
+							src={bannerStudieMatch}
+							alt="Studie Match Banner"
+							className="w-full h-auto object-contain rounded-2xl"
+						/>
 					</div>
-				</div>
-			</section>
-			{/* About Studie Match Section */}
-			<section className="py-8 sm:py-12">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 items-center">
-						{/* Large logo */}
-						<div className="lg:col-span-1 flex justify-center">
-							<img
-								src={studieLogo}
-								alt="Studie Match Logo"
-								className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-contain"
-							/>
+					{/* Timescale and Year */}
+					<div className="flex items-start justify-between mt-6">
+						<div className="flex items-start">
+							<div>
+								<p className="text-sm text-gray-500 mb-1">Timescale</p>
+								<p className="text-lg font-semibold text-black">2.5 Months</p>
+							</div>
+							<div className="w-px h-12 bg-gray-300 mx-6"></div>
+							<div>
+								<p className="text-sm text-gray-500 mb-1">Year</p>
+								<p className="text-lg font-semibold text-black">2025</p>
+							</div>
 						</div>
-
-						{/* Description */}
-						<div className="lg:col-span-2 text-left">
-							<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-6 sm:mb-8 text-left">
-								<span
-									style={{
-										fontFamily: "Playfair Display, serif",
-										fontWeight: "normal",
-										fontStyle: "italic"
-									}}
-								>
-									About{" "}
-								</span>
-								<span
-									style={{
-										fontFamily: "Poppins, sans-serif",
-										fontWeight: "700"
-									}}
-								>
-									Studie Match
-								</span>
-							</h2>
-							<p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed text-left">
-								Studiematch is een interactieve webapplicatie die jongeren helpt
-								hun ideale studierichting te vinden op basis van hun
-								persoonlijkheid. Via een visuele RIASEC-test ontdekken
-								leerlingen hun profiel en krijgen ze studierichtingen aanbevolen
-								die écht bij hen passen. Het platform combineert design,
-								gebruiksvriendelijkheid en slimme technologie om studiekeuze
-								leuker en persoonlijker te maken.
-							</p>
-							<blockquote
-								className="text-sm sm:text-base md:text-lg italic border-l-4 pl-4 sm:pl-6 text-left"
-								style={{ borderLeftColor: "#56adc0" }}
+						<div className="ml-8">
+							<a
+								href="https://studie-match.vercel.app/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center gap-2.5 bg-white border-2 border-black text-black pl-6 pr-4 py-2.5 rounded-full text-base font-semibold hover:bg-[#eeeeee] transition-colors duration-300 group"
 							>
-								"Een speels en vet lettertype dat jongeren aanspreekt, met een
-								afstudeerhoed en frisse groene achtergrond die groei en kansen
-								symboliseert."
-							</blockquote>
+								View Live Site
+								<div className="w-8 h-8 bg-gradient-to-bl from-[#d8d8d9] to-white rounded-full flex items-center justify-center">
+									<img src={arrowUpBtn} alt="" className="w-7 h-7" />
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
 			</section>
-
-			{/* GIFs Section */}
+			{/* Description */}
+			<section className="pt-4 pb-8 sm:pb-12">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="text-center">
+						<p
+							className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed max-w-6xl mx-auto"
+							style={{ fontFamily: "Poppins, sans-serif" }}
+						>
+							Studiematch uses an interactive personality test based on the
+							RIASEC model (Holland theory), where young people discover
+							themselves within six personality types: Realistic, Investigative,
+							Artistic, Social, Enterprising and Conventional. Based on their
+							results, the platform shows study directions and professions that
+							match. Each recommendation is supplemented with informative
+							descriptions of the education programs that align with these
+							choices.
+						</p>
+					</div>
+				</div>
+			</section>
+			{/* Showcase Image */}
 			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-						{/* Home Page GIF */}
-						<div className="flex justify-center">
-							<img
-								src="/studiematch-home-ezgif.com-video-to-gif-converter.gif"
-								alt="StudieMatch Home Page Demo"
-								className="w-full max-w-xl sm:max-w-2xl"
-							/>
-						</div>
-
-						{/* Test GIF */}
-						<div className="flex justify-center">
-							<img
-								src="/studiematch-test-ezgif.com-video-to-gif-converter.gif"
-								alt="StudieMatch Test Demo"
-								className="w-full max-w-xl sm:max-w-2xl"
-							/>
-						</div>
+					<div className="flex items-center justify-center">
+						<img
+							src={showcaseStudie}
+							alt="Studie Match Showcase"
+							className="w-full h-auto object-contain rounded-2xl"
+						/>
 					</div>
-
-					{/* Types and Filter GIFs - Side by Side */}
-					<div className="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-						{/* Types GIF */}
-						<div className="flex justify-center">
-							<img
-								src="/studiematch-types-ezgif.com-video-to-gif-converter.gif"
-								alt="StudieMatch Personality Types Demo"
-								className="w-full max-w-xl sm:max-w-2xl"
-							/>
+				</div>
+			</section>
+			{/* Project Context */}
+			<section className="py-8 sm:py-12">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="text-center">
+						<p
+							className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed max-w-6xl mx-auto"
+							style={{ fontFamily: "Poppins, sans-serif" }}
+						>
+							For my bachelor degree, I created this website to address a common
+							challenge many young people face in secondary education: choice
+							stress when determining their study direction. They often have
+							insufficient insight into their own interests and strengths,
+							making it difficult to make a targeted choice. StudieMatch aims to
+							tackle this problem through an accessible and visually appealing
+							web application that helps young people discover which study
+							directions truly suit them.
+						</p>
+					</div>
+				</div>
+			</section>
+			{/* Design System */}
+			<section className="py-8 sm:py-12">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+						{/* Color Palette */}
+						<div
+							className="rounded-2xl py-24 px-2"
+							style={{ backgroundColor: "#f2f2f2" }}
+						>
+							<div className="flex justify-center">
+								<div
+									className="w-24 h-85"
+									style={{
+										backgroundColor: "#FFFFFF",
+										border: "1px solid #e5e5e5"
+									}}
+								></div>{" "}
+								<div
+									className="w-24 h-85"
+									style={{ backgroundColor: "#DDF7F5" }}
+								></div>
+								<div
+									className="w-24 h-85"
+									style={{ backgroundColor: "#48A6BB" }}
+								></div>
+								<div
+									className="w-24 h-85"
+									style={{ backgroundColor: "#000000" }}
+								></div>
+							</div>
 						</div>
 
-						{/* Filter GIF */}
-						<div className="flex justify-center">
-							<img
-								src="/studiematch-filter-ezgif.com-video-to-gif-converter.gif"
-								alt="StudieMatch Filter Demo"
-								className="w-full max-w-xl sm:max-w-2xl"
-							/>
+						{/* Typography */}
+						<div
+							className="rounded-2xl py-8 px-2"
+							style={{ backgroundColor: "#f2f2f2" }}
+						>
+							<div className="text-center flex flex-col items-center justify-center h-full">
+								<div
+									className="text-9xl font-bold text-black mb-4"
+									style={{ fontFamily: "Poppins, sans-serif" }}
+								>
+									Aa
+								</div>
+								<div
+									className="text-6xl text-black"
+									style={{ fontFamily: "Poppins, sans-serif" }}
+								>
+									Poppins
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-
+			{/* Process Section */}
+			<section className="py-8 sm:py-12">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="text-center">
+						<p
+							className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed max-w-6xl mx-auto"
+							style={{ fontFamily: "Poppins, sans-serif" }}
+						>
+							The development process involved extensive user research,
+							iterative design, and careful attention to visual hierarchy.
+							Through multiple testing phases with target users, I refined the
+							interface to ensure maximum clarity and engagement for students
+							navigating their educational journey.
+						</p>
+					</div>
+				</div>
+			</section>
 			{/* Showreel Video Section */}
 			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h2
-						className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-8 sm:mb-12 text-center"
-						style={{
-							fontFamily: "Playfair Display, serif",
-							fontWeight: "normal",
-							fontStyle: "italic"
-						}}
-					>
-						Showreel
-					</h2>
 					<div className="flex justify-center">
 						<iframe
 							width="1000"
@@ -235,19 +272,7 @@ function StudieMatch() {
 					</div>
 				</div>
 			</section>
-			{/* Call to Action */}
-			<section className="py-8 sm:py-12">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<a
-						href="https://studie-match.vercel.app/"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="inline-block bg-white border-2 border-black text-black px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-semibold hover:bg-black hover:text-white transition-colors duration-300"
-					>
-						Website Link
-					</a>
-				</div>
-			</section>
+			{/* Commented out sections - About, GIFs, Showreel, and Call to Action */}
 			<Footer />
 		</div>
 	);

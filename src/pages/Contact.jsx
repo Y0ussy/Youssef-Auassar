@@ -73,7 +73,7 @@ function Contact() {
 			<Navigation />
 
 			{/* Contact Header */}
-			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
+			<section className="pt-8 sm:pt-12 pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					{/* Main Title */}
 					<div className="text-center mb-16 sm:mb-20">

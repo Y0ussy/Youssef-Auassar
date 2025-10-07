@@ -163,7 +163,7 @@ function FiestaCultura() {
 		<div className="min-h-screen">
 			<Navigation />
 			{/* Project Title and Categories */}
-			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
+			<section className="pt-8 sm:pt-12 pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h1 className="text-5xl md:text-6xl lg:text-7xl text-black mb-6">
 						<span

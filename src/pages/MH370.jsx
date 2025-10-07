@@ -71,7 +71,7 @@ function MH370() {
 		<div className="min-h-screen">
 			<Navigation />
 			{/* Project Title and Categories */}
-			<section className="pt-24 sm:pt-32 pb-8 sm:pb-12">
+			<section className="pt-8 sm:pt-12 pb-8 sm:pb-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black mb-4 sm:mb-6">
 						<span
