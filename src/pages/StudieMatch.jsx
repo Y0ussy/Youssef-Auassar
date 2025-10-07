@@ -1,8 +1,12 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import bannerStudieMatch from "../assets/banner-studiematch.png";
 import showcaseStudie from "../assets/showcase-studie.png";
+import fiestaCulturaImage from "../assets/fiesta-cultura.png";
+import debibImage from "../assets/debib.png";
+import moodyImage from "../assets/moody.png";
 import arrowUpBtn from "../assets/arow-up-btn.svg";
 
 function StudieMatch() {
@@ -253,22 +257,91 @@ function StudieMatch() {
 					</div>
 				</div>
 			</section>
-			{/* Showreel Video Section */}
+			{/* Other Works Section */}
 			<section className="py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="flex justify-center">
-						<iframe
-							width="1000"
-							height="562"
-							src="https://www.youtube.com/embed/4gw4rh8zOsU?si=DDvSFuBnmJ31tN7u"
-							title="YouTube video player"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerpolicy="strict-origin-when-cross-origin"
-							allowfullscreen
-							className="border-0 w-full max-w-4xl h-auto aspect-video"
-							style={{ border: "none", outline: "none" }}
-						></iframe>
+					<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-8 sm:mb-12 text-center">
+						<span
+							style={{
+								fontFamily: "Playfair Display, serif",
+								fontWeight: "normal",
+								fontStyle: "italic"
+							}}
+						>
+							Other{" "}
+						</span>
+						<span
+							style={{
+								fontFamily: "Poppins, sans-serif",
+								fontWeight: "700"
+							}}
+						>
+							Works
+						</span>
+					</h2>
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 sm:gap-x-4 md:gap-x-6 gap-y-6 sm:gap-y-8 md:gap-y-12">
+						{/* Work 1 - Fiesta Cultura */}
+						<Link to="/fiesta-cultura" className="block">
+							<div className="rounded-none overflow-hidden">
+								<div className="">
+									<div className="relative mb-3 bg-gradient-to-t from-[#EA7B96] to-[#FFF7F7] p-2 sm:p-3 md:p-4 h-32 sm:h-40 md:h-48 flex items-center justify-center overflow-hidden">
+										<img
+											src={fiestaCulturaImage}
+											alt="Fiesta Cultura App"
+											className="w-[110%] h-[110%] object-contain -mb-6 transition-transform duration-300 hover:scale-102"
+										/>
+									</div>
+									<h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-1 md:mb-2 px-2 md:px-0">
+										Fiesta Cultura
+									</h3>
+									<p className="text-gray-700 text-xs sm:text-sm md:text-base px-2 md:px-0">
+										Een multiculturele festival event app
+									</p>
+								</div>
+							</div>
+						</Link>
+
+						{/* Work 2 - DeBib */}
+						<Link to="/de-bib" className="block">
+							<div className="rounded-none overflow-hidden">
+								<div className="">
+									<div className="relative mb-3 bg-gradient-to-t from-[#0FB7AD] to-[#F1FEF9] p-2 sm:p-3 md:p-4 h-32 sm:h-40 md:h-48 flex items-center justify-center overflow-hidden">
+										<img
+											src={debibImage}
+											alt="De Bib App"
+											className="w-[110%] h-[110%] object-contain -mb-6 transition-transform duration-300 hover:scale-102"
+										/>
+									</div>
+									<h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-1 md:mb-2 px-2 md:px-0">
+										De Bib
+									</h3>
+									<p className="text-gray-700 text-xs sm:text-sm md:text-base px-2 md:px-0">
+										Een moderne bibliotheek app voor het lenen van boeken
+									</p>
+								</div>
+							</div>
+						</Link>
+
+						{/* Work 3 - Moody Mingle */}
+						<Link to="/moody-mingle" className="block">
+							<div className="rounded-none overflow-hidden">
+								<div className="">
+									<div className="relative mb-3 bg-gradient-to-b from-[#FFFFFF] to-[#4B7BBE] p-2 sm:p-3 md:p-4 h-32 sm:h-40 md:h-48 flex items-center justify-center overflow-hidden">
+										<img
+											src={moodyImage}
+											alt="Moody Mingle Chewing Gum"
+											className="w-4/5 h-4/5 object-contain transition-transform duration-300 hover:scale-102"
+										/>
+									</div>
+									<h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-1 md:mb-2 px-2 md:px-0">
+										Moody Mingle
+									</h3>
+									<p className="text-gray-700 text-xs sm:text-sm md:text-base px-2 md:px-0">
+										Een kauwgom die mensen verbindt
+									</p>
+								</div>
+							</div>
+						</Link>
 					</div>
 				</div>
 			</section>
