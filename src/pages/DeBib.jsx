@@ -1,8 +1,13 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import debibImage from "../assets/debib.png";
-import bibappImage from "../assets/bibapp.png";
+import debibShowcaseImage from "../assets/debib-showcase.png";
+import arrowUpBtn from "../assets/arow-up-btn.svg";
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import studieMatchImage from "../assets/studie-match.png";
+import fiestaCulturaImage from "../assets/fiesta-cultura.png";
+import moodyImage from "../assets/moody.png";
 
 // Import all design assets for the carousel
 import activiteitenKalender from "../assets/Activiteiten - kalender.png";
@@ -133,52 +138,65 @@ function DeBib() {
 								fontWeight: "700"
 							}}
 						>
-							De Bib
+							De Bib - Modern Library App
 						</span>
 					</h1>
 					<p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700">
-						App Design • UX Research • Visual Identity • Wireframing
+						Library | UI/UX Design
 					</p>
 				</div>
 			</section>
 			{/* Hero Section */}
 			<section className="pb-8 sm:pb-12 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<img
-						src={bibappImage}
-						alt="De Bib App Banner"
-						className="w-full h-auto object-contain"
-						onError={(e) => {
-							console.error("Image failed to load:", bibappImage);
-							e.target.style.display = "none";
-						}}
-					/>
+					<div className="flex items-center justify-center">
+						<img
+							src={debibShowcaseImage}
+							alt="De Bib App Showcase"
+							className="w-full h-auto object-contain rounded-2xl"
+							onError={(e) => {
+								console.error("Image failed to load:", debibShowcaseImage);
+								e.target.style.display = "none";
+							}}
+						/>
+					</div>
+					{/* Timescale and Year */}
+					<div className="flex items-start justify-between mt-6">
+						<div className="flex items-start">
+							<div>
+								<p className="text-sm text-gray-500 mb-1">Timescale</p>
+								<p className="text-lg font-semibold text-black">1 Month</p>
+							</div>
+							<div className="w-px h-12 bg-gray-300 mx-6"></div>
+							<div>
+								<p className="text-sm text-gray-500 mb-1">Year</p>
+								<p className="text-lg font-semibold text-black">2024</p>
+							</div>
+						</div>
+						<div className="ml-8">
+							<a
+								href="#"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center gap-2.5 bg-white border-2 border-black text-black pl-6 pr-4 py-2.5 rounded-full text-base font-semibold hover:bg-[#eeeeee] transition-colors duration-300 group"
+							>
+								View Prototype
+								<div className="w-8 h-8 bg-gradient-to-bl from-[#d8d8d9] to-white rounded-full flex items-center justify-center">
+									<img src={arrowUpBtn} alt="" className="w-7 h-7" />
+								</div>
+							</a>
+						</div>
+					</div>
 				</div>
 			</section>
-			{/* About De Bib Section */}
-			<section className="py-8 sm:py-12 bg-white">
+			{/* Description */}
+			<section className="pt-4 pb-8 sm:pb-12 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-left">
-						<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-6 sm:mb-8">
-							<span
-								style={{
-									fontFamily: "Playfair Display, serif",
-									fontWeight: "normal",
-									fontStyle: "italic"
-								}}
-							>
-								About{" "}
-							</span>
-							<span
-								style={{
-									fontFamily: "Poppins, sans-serif",
-									fontWeight: "700"
-								}}
-							>
-								De Bib
-							</span>
-						</h2>
-						<p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed">
+					<div className="text-center">
+						<p
+							className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed max-w-6xl mx-auto"
+							style={{ fontFamily: "Poppins, sans-serif" }}
+						>
 							This is a UI/UX design for a mobile app based on the existing
 							website BIB, which offers a wide variety of books, eBooks,
 							audiobooks, and more. The app features a user-friendly interface
@@ -193,19 +211,6 @@ function DeBib() {
 			{/* Design Section */}
 			<section className="pt-8 sm:pt-12 pb-4 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="flex items-center justify-between mb-8 sm:mb-12">
-						<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black">
-							<span
-								style={{
-									fontFamily: "Playfair Display, serif",
-									fontWeight: "normal",
-									fontStyle: "italic"
-								}}
-							>
-								Design
-							</span>
-						</h2>
-					</div>
 					<div
 						ref={carouselRef}
 						className="overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
@@ -224,7 +229,7 @@ function DeBib() {
 									<img
 										src={image}
 										alt={`De Bib Design ${index + 1}`}
-										className="w-64 sm:w-80 h-auto object-contain pointer-events-none"
+										className="w-64 sm:w-80 h-auto object-contain pointer-events-none rounded-2xl"
 										onError={(e) => {
 											console.error("Carousel image failed to load:", image);
 											e.target.style.display = "none";
@@ -233,6 +238,95 @@ function DeBib() {
 								</div>
 							))}
 						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Other Works Section */}
+			<section className="py-8 sm:py-12 bg-white">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-8 sm:mb-12 text-center">
+						<span
+							style={{
+								fontFamily: "Playfair Display, serif",
+								fontWeight: "normal",
+								fontStyle: "italic"
+							}}
+						>
+							Other{" "}
+						</span>
+						<span
+							style={{
+								fontFamily: "Poppins, sans-serif",
+								fontWeight: "700"
+							}}
+						>
+							Works
+						</span>
+					</h2>
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 sm:gap-x-4 md:gap-x-6 gap-y-6 sm:gap-y-8 md:gap-y-12">
+						{/* Work 1 - Studie Match */}
+						<Link to="/studie-match" className="block">
+							<div className="rounded-none overflow-hidden">
+								<div className="">
+									<div className="relative mb-3 bg-gradient-to-t from-[#50AABE] to-[#DBF6F4] p-2 sm:p-3 md:p-4 h-32 sm:h-40 md:h-48 flex items-center justify-center overflow-hidden">
+										<img
+											src={studieMatchImage}
+											alt="Studie Match Website"
+											className="w-24/25 h-24/25 object-contain transition-transform duration-300 hover:scale-102"
+										/>
+									</div>
+									<h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-1 md:mb-2 px-2 md:px-0">
+										Studie Match
+									</h3>
+									<p className="text-gray-700 text-xs sm:text-sm md:text-base px-2 md:px-0">
+										A website that helps young people choose their studies
+									</p>
+								</div>
+							</div>
+						</Link>
+
+						{/* Work 2 - Fiesta Cultura */}
+						<Link to="/fiesta-cultura" className="block">
+							<div className="rounded-none overflow-hidden">
+								<div className="">
+									<div className="relative mb-3 bg-gradient-to-t from-[#EA7B96] to-[#FFF7F7] p-2 sm:p-3 md:p-4 h-32 sm:h-40 md:h-48 flex items-center justify-center overflow-hidden">
+										<img
+											src={fiestaCulturaImage}
+											alt="Fiesta Cultura App"
+											className="w-[110%] h-[110%] object-contain -mb-6 transition-transform duration-300 hover:scale-102"
+										/>
+									</div>
+									<h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-1 md:mb-2 px-2 md:px-0">
+										Fiesta Cultura
+									</h3>
+									<p className="text-gray-700 text-xs sm:text-sm md:text-base px-2 md:px-0">
+										A multicultural festival event app
+									</p>
+								</div>
+							</div>
+						</Link>
+
+						{/* Work 3 - Moody Mingle */}
+						<Link to="/moody-mingle" className="block">
+							<div className="rounded-none overflow-hidden">
+								<div className="">
+									<div className="relative mb-3 bg-gradient-to-b from-[#FFFFFF] to-[#4B7BBE] p-2 sm:p-3 md:p-4 h-32 sm:h-40 md:h-48 flex items-center justify-center overflow-hidden">
+										<img
+											src={moodyImage}
+											alt="Moody Mingle Chewing Gum"
+											className="w-4/5 h-4/5 object-contain transition-transform duration-300 hover:scale-102"
+										/>
+									</div>
+									<h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-1 md:mb-2 px-2 md:px-0">
+										Moody Mingle
+									</h3>
+									<p className="text-gray-700 text-xs sm:text-sm md:text-base px-2 md:px-0">
+										A chewing gum that connects people
+									</p>
+								</div>
+							</div>
+						</Link>
 					</div>
 				</div>
 			</section>
