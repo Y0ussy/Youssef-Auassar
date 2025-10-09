@@ -76,9 +76,9 @@ function Projects() {
 		{ id: "all", label: "All projects", emoji: "🎯" },
 		{ id: "web-design", label: "Web Design", emoji: "🖥️" },
 		{ id: "app-design", label: "App Design", emoji: "📱" },
-		{ id: "web-development", label: "Web Development", emoji: "💻" },
-		{ id: "brand-identity", label: "Brand Identity", emoji: "🎨" },
-		{ id: "motion-design", label: "Motion Design", emoji: "🎬" }
+		{ id: "web-development", label: "Web Development", emoji: "💻" }
+		// { id: "brand-identity", label: "Brand Identity", emoji: "🎨" },
+		// { id: "motion-design", label: "Motion Design", emoji: "🎬" }
 	];
 
 	const projects = [
@@ -117,31 +117,31 @@ function Projects() {
 				"w-[110%] h-[110%] object-contain -mb-8 transition-transform duration-300 hover:scale-102",
 			categories: ["app-design"],
 			emoji: "📚"
-		},
-		{
-			id: "moody-mingle",
-			title: "Moody Mingle",
-			description: "Een kauwgom die mensen verbindt",
-			image: moodyImage,
-			alt: "Moody Mingle Chewing Gum",
-			background: "bg-gradient-to-b from-[#FFFFFF] to-[#4B7BBE]",
-			imageClass:
-				"w-4/5 h-4/5 object-contain transition-transform duration-300 hover:scale-102",
-			categories: ["brand-identity"],
-			emoji: "💙"
-		},
-		{
-			id: "mh370",
-			title: "The Disappearance of MH370",
-			description: "Een motion infographic over de verdwijning van MH370",
-			image: planeImage,
-			alt: "MH370 Motion Infographic",
-			background: "bg-gradient-to-b from-white to-gray-400",
-			imageClass:
-				"w-24/25 h-24/25 object-contain transition-transform duration-300 hover:scale-102",
-			categories: ["motion-design"],
-			emoji: "✈️"
 		}
+		// {
+		// 	id: "moody-mingle",
+		// 	title: "Moody Mingle",
+		// 	description: "Een kauwgom die mensen verbindt",
+		// 	image: moodyImage,
+		// 	alt: "Moody Mingle Chewing Gum",
+		// 	background: "bg-gradient-to-b from-[#FFFFFF] to-[#4B7BBE]",
+		// 	imageClass:
+		// 		"w-4/5 h-4/5 object-contain transition-transform duration-300 hover:scale-102",
+		// 	categories: ["brand-identity"],
+		// 	emoji: "💙"
+		// },
+		// {
+		// 	id: "mh370",
+		// 	title: "The Disappearance of MH370",
+		// 	description: "Een motion infographic over de verdwijning van MH370",
+		// 	image: planeImage,
+		// 	alt: "MH370 Motion Infographic",
+		// 	background: "bg-gradient-to-b from-white to-gray-400",
+		// 	imageClass:
+		// 		"w-24/25 h-24/25 object-contain transition-transform duration-300 hover:scale-102",
+		// 	categories: ["motion-design"],
+		// 	emoji: "✈️"
+		// }
 	];
 
 	const filteredProjects =
