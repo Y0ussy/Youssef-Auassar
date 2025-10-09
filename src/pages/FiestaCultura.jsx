@@ -99,6 +99,16 @@ function FiestaCultura() {
 		carouselRef.current.scrollLeft = scrollLeft - walk;
 	};
 
+	const scrollToCarousel = () => {
+		const carouselElement = document.getElementById("design-carousel");
+		if (carouselElement) {
+			carouselElement.scrollIntoView({
+				behavior: "smooth",
+				block: "start"
+			});
+		}
+	};
+
 	useEffect(() => {
 		document.title = "Fiesta Cultura | Youssef Auassar Portfolio";
 
@@ -208,17 +218,15 @@ function FiestaCultura() {
 							</div>
 						</div>
 						<div className="ml-8">
-							<a
-								href="#"
-								target="_blank"
-								rel="noopener noreferrer"
+							<button
+								onClick={scrollToCarousel}
 								className="inline-flex items-center gap-2.5 bg-white border-2 border-black text-black pl-6 pr-4 py-2.5 rounded-full text-base font-semibold hover:bg-[#eeeeee] transition-colors duration-300 group"
 							>
-								View Prototype
+								View Design
 								<div className="w-8 h-8 bg-gradient-to-bl from-[#d8d8d9] to-white rounded-full flex items-center justify-center">
 									<img src={arrowUpBtn} alt="" className="w-7 h-7" />
 								</div>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -271,7 +279,7 @@ function FiestaCultura() {
 				</div>
 			</section>
 			{/* Design Section */}
-			<section className="pt-8 sm:pt-12 pb-4">
+			<section id="design-carousel" className="pt-8 sm:pt-12 pb-4">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div
 						ref={carouselRef}
