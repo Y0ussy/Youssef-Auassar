@@ -218,7 +218,10 @@ function DeBib() {
 			</section>
 
 			{/* Design Section */}
-			<section id="design-carousel" className="pt-8 sm:pt-12 pb-4 bg-white">
+			<section
+				id="design-carousel"
+				className="pt-8 sm:pt-12 pb-8 sm:pb-12 bg-white"
+			>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div
 						ref={carouselRef}

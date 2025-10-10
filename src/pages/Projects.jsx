@@ -76,7 +76,7 @@ function Projects() {
 		{ id: "all", label: "All projects", emoji: "🎯" },
 		{ id: "web-design", label: "Web Design", emoji: "🖥️" },
 		{ id: "app-design", label: "App Design", emoji: "📱" },
-		{ id: "web-development", label: "Web Development", emoji: "💻" }
+		{ id: "web-development", label: "Web Development", emoji: "</>" }
 		// { id: "brand-identity", label: "Brand Identity", emoji: "🎨" },
 		// { id: "motion-design", label: "Motion Design", emoji: "🎬" }
 	];
