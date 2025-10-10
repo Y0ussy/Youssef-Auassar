@@ -254,6 +254,50 @@ function DeBib() {
 				</div>
 			</section>
 
+			{/* Process Section */}
+			<section className="pt-8 sm:pt-12 pb-8 sm:pb-12 bg-white">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="text-center">
+						<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-8 sm:mb-12">
+							<span
+								style={{
+									fontFamily: "Playfair Display, serif",
+									fontWeight: "normal",
+									fontStyle: "italic"
+								}}
+							>
+								The{" "}
+							</span>
+							<span
+								style={{
+									fontFamily: "Poppins, sans-serif",
+									fontWeight: "700"
+								}}
+							>
+								Process
+							</span>
+						</h2>
+						<div className="max-w-6xl mx-auto">
+							<p
+								className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed"
+								style={{ fontFamily: "Poppins, sans-serif" }}
+							>
+								This project was part of a class assignment to create a mobile
+								app for the Flemish library system. The challenge was that there
+								was only one main library website for all of Flanders, so we
+								needed to understand their needs and user requirements. To
+								ensure the app would meet real user needs, we conducted
+								interviews with library staff members who work directly with
+								visitors every day. These conversations helped us understand the
+								pain points in the current system and identify key features that
+								would make the library experience more accessible and
+								user-friendly.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			{/* Other Works Section */}
 			<section className="py-8 sm:py-12 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
