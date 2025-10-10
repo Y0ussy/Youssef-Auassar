@@ -258,25 +258,6 @@ function DeBib() {
 			<section className="pt-8 sm:pt-12 pb-8 sm:pb-12 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center">
-						<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-8 sm:mb-12">
-							<span
-								style={{
-									fontFamily: "Playfair Display, serif",
-									fontWeight: "normal",
-									fontStyle: "italic"
-								}}
-							>
-								The{" "}
-							</span>
-							<span
-								style={{
-									fontFamily: "Poppins, sans-serif",
-									fontWeight: "700"
-								}}
-							>
-								Process
-							</span>
-						</h2>
 						<div className="max-w-6xl mx-auto">
 							<p
 								className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed"
