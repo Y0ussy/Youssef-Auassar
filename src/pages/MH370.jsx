@@ -1,7 +1,11 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import motionMoodboard from "../assets/motion-moodboard.png";
+import studieMatchImage from "../assets/studie-match.png";
+import fiestaCulturaImage from "../assets/fiesta-cultura.png";
+import debibImage from "../assets/debib.png";
 
 function MH370() {
 	useEffect(() => {
@@ -137,10 +141,10 @@ function MH370() {
 								</span>
 							</h2>
 							<p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 mb-6 leading-relaxed px-4 lg:px-0">
-								Een motion infographic over de verdwijning van MH370. Deze
-								project combineert motion design, storytelling en sound design
-								om het complexe verhaal van de verdwenen vlucht op een visueel
-								aantrekkelijke en informatieve manier te vertellen.
+								A motion infographic about the disappearance of MH370. This
+								project combines motion design, storytelling and sound design to
+								tell the complex story of the missing flight in a visually
+								appealing and informative way.
 							</p>
 						</div>
 					</div>
@@ -171,8 +175,8 @@ function MH370() {
 							</span>
 						</h2>
 						<p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto px-4">
-							De visuele inspiratie en conceptontwikkeling voor de MH370 motion
-							infographic
+							The visual inspiration and concept development for the MH370
+							motion infographic
 						</p>
 					</div>
 					<div className="flex justify-center px-4 sm:px-0">
@@ -181,6 +185,95 @@ function MH370() {
 							alt="MH370 Motion Design Moodboard"
 							className="w-full max-w-5xl h-auto object-contain shadow-lg"
 						/>
+					</div>
+				</div>
+			</section>
+
+			{/* Other Projects Section */}
+			<section className="py-8 sm:py-12">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="text-center mb-8 sm:mb-12">
+						<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-4 sm:mb-6">
+							<span
+								style={{
+									fontFamily: "Playfair Display, serif",
+									fontWeight: "normal",
+									fontStyle: "italic"
+								}}
+							>
+								Other{" "}
+							</span>
+							<span
+								style={{
+									fontFamily: "Poppins, sans-serif",
+									fontWeight: "700"
+								}}
+							>
+								Projects
+							</span>
+						</h2>
+						<p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto px-4">
+							Explore more of my creative work and digital design projects
+						</p>
+					</div>
+
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+						{/* Studie Match Project */}
+						<Link to="/studie-match" className="block">
+							<div className="rounded-none overflow-hidden">
+								<div className="relative mb-3 bg-gradient-to-t from-[#50AABE] to-[#DBF6F4] p-3 sm:p-4 md:p-6 h-40 sm:h-56 md:h-80 flex items-center justify-center overflow-hidden">
+									<img
+										src={studieMatchImage}
+										alt="Studie Match Website"
+										className="w-24/25 h-24/25 object-contain transition-transform duration-300 hover:scale-102"
+									/>
+								</div>
+								<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-1 md:mb-2 px-4 md:px-0">
+									Studie Match
+								</h3>
+								<p className="text-gray-700 text-sm sm:text-base md:text-lg px-4 md:px-0">
+									A website that helps young people with their study choice
+								</p>
+							</div>
+						</Link>
+
+						{/* Fiesta Cultura Project */}
+						<Link to="/fiesta-cultura" className="block">
+							<div className="rounded-none overflow-hidden">
+								<div className="relative mb-3 bg-gradient-to-t from-[#EA7B96] to-[#FFF7F7] p-3 sm:p-4 md:p-6 h-40 sm:h-56 md:h-80 flex items-center justify-center overflow-hidden">
+									<img
+										src={fiestaCulturaImage}
+										alt="Fiesta Cultura App"
+										className="w-[110%] h-[110%] object-contain -mb-8 transition-transform duration-300 hover:scale-102"
+									/>
+								</div>
+								<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-1 md:mb-2 px-4 md:px-0">
+									Fiesta Cultura
+								</h3>
+								<p className="text-gray-700 text-sm sm:text-base md:text-lg px-4 md:px-0">
+									A multicultural festival event app
+								</p>
+							</div>
+						</Link>
+
+						{/* De Bib Project */}
+						<Link to="/de-bib" className="block">
+							<div className="rounded-none overflow-hidden">
+								<div className="relative mb-3 bg-gradient-to-t from-[#0FB7AD] to-[#F1FEF9] p-3 sm:p-4 md:p-6 h-40 sm:h-56 md:h-80 flex items-center justify-center overflow-hidden">
+									<img
+										src={debibImage}
+										alt="De Bib App"
+										className="w-[110%] h-[110%] object-contain -mb-8 transition-transform duration-300 hover:scale-102"
+									/>
+								</div>
+								<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-1 md:mb-2 px-4 md:px-0">
+									De Bib
+								</h3>
+								<p className="text-gray-700 text-sm sm:text-base md:text-lg px-4 md:px-0">
+									A modern library app for borrowing books
+								</p>
+							</div>
+						</Link>
 					</div>
 				</div>
 			</section>

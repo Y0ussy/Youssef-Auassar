@@ -76,9 +76,9 @@ function Projects() {
 		{ id: "all", label: "All projects", emoji: "🎯" },
 		{ id: "web-design", label: "Web Design", emoji: "🖥️" },
 		{ id: "app-design", label: "App Design", emoji: "📱" },
-		{ id: "web-development", label: "Web Development", emoji: "</>" }
+		{ id: "web-development", label: "Web Development", emoji: "</>" },
 		// { id: "brand-identity", label: "Brand Identity", emoji: "🎨" },
-		// { id: "motion-design", label: "Motion Design", emoji: "🎬" }
+		{ id: "motion-design", label: "Motion Design", emoji: "🎬" }
 	];
 
 	const projects = [
@@ -117,7 +117,7 @@ function Projects() {
 				"w-[110%] h-[110%] object-contain -mb-8 transition-transform duration-300 hover:scale-102",
 			categories: ["app-design"],
 			emoji: "📚"
-		}
+		},
 		// {
 		// 	id: "moody-mingle",
 		// 	title: "Moody Mingle",
@@ -130,18 +130,18 @@ function Projects() {
 		// 	categories: ["brand-identity"],
 		// 	emoji: "💙"
 		// },
-		// {
-		// 	id: "mh370",
-		// 	title: "The Disappearance of MH370",
-		// 	description: "Een motion infographic over de verdwijning van MH370",
-		// 	image: planeImage,
-		// 	alt: "MH370 Motion Infographic",
-		// 	background: "bg-gradient-to-b from-white to-gray-400",
-		// 	imageClass:
-		// 		"w-24/25 h-24/25 object-contain transition-transform duration-300 hover:scale-102",
-		// 	categories: ["motion-design"],
-		// 	emoji: "✈️"
-		// }
+		{
+			id: "mh370",
+			title: "The Disappearance of MH370",
+			description: "A motion infographic about the disappearance of MH370",
+			image: planeImage,
+			alt: "MH370 Motion Infographic",
+			background: "bg-gradient-to-b from-white to-gray-400",
+			imageClass:
+				"w-24/25 h-24/25 object-contain transition-transform duration-300 hover:scale-102",
+			categories: ["motion-design"],
+			emoji: "✈️"
+		}
 	];
 
 	const filteredProjects =
@@ -309,6 +309,32 @@ function Projects() {
 									</Link>
 								) : project.id === "moody-mingle" ? (
 									<Link to="/moody-mingle" className="block">
+										<div className="">
+											<div
+												className={`relative mb-3 ${project.background} p-3 sm:p-4 md:p-6 h-40 sm:h-56 md:h-80 flex items-center justify-center overflow-hidden`}
+											>
+												{project.image ? (
+													<img
+														src={project.image}
+														alt={project.alt}
+														className={project.imageClass}
+													/>
+												) : (
+													<div className="w-16 h-16 bg-black rounded flex items-center justify-center">
+														<div className="w-8 h-8 bg-white rounded-sm"></div>
+													</div>
+												)}
+											</div>
+											<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-1 md:mb-2 px-4 md:px-0">
+												{project.title}
+											</h3>
+											<p className="text-gray-700 text-sm sm:text-base md:text-lg px-4 md:px-0">
+												{project.description}
+											</p>
+										</div>
+									</Link>
+								) : project.id === "mh370" ? (
+									<Link to="/mh370" className="block">
 										<div className="">
 											<div
 												className={`relative mb-3 ${project.background} p-3 sm:p-4 md:p-6 h-40 sm:h-56 md:h-80 flex items-center justify-center overflow-hidden`}

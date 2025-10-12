@@ -7,7 +7,7 @@ import Contact from "./pages/Contact";
 import StudieMatch from "./pages/StudieMatch";
 import FiestaCultura from "./pages/FiestaCultura";
 import DeBib from "./pages/DeBib";
-// import MH370 from "./pages/MH370";
+import MH370 from "./pages/MH370";
 // import MoodyMingle from "./pages/MoodyMingle";
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
 				<Route path="/studie-match" element={<StudieMatch />} />
 				<Route path="/fiesta-cultura" element={<FiestaCultura />} />
 				<Route path="/de-bib" element={<DeBib />} />
-				{/* <Route path="/mh370" element={<MH370 />} />
-				<Route path="/moody-mingle" element={<MoodyMingle />} /> */}
+				<Route path="/mh370" element={<MH370 />} />
+				{/* <Route path="/moody-mingle" element={<MoodyMingle />} /> */}
 			</Routes>
 		</Router>
 	);
