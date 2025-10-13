@@ -85,7 +85,7 @@ function Projects() {
 		{
 			id: "studie-match",
 			title: "Studie Match",
-			description: "Een website die jongeren helpt bij hun studiekeuze",
+			description: "A website that helps young people with their study choice",
 			image: studieMatchImage,
 			alt: "Studie Match Website",
 			background: "bg-gradient-to-t from-[#50AABE] to-[#DBF6F4]",
@@ -97,7 +97,7 @@ function Projects() {
 		{
 			id: "fiesta-cultura",
 			title: "Fiesta Cultura",
-			description: "Een multiculturele festival event app",
+			description: "A multicultural festival event app",
 			image: fiestaCulturaImage,
 			alt: "Fiesta Cultura App",
 			background: "bg-gradient-to-t from-[#EA7B96] to-[#FFF7F7]",
@@ -109,7 +109,7 @@ function Projects() {
 		{
 			id: "de-bib",
 			title: "De Bib",
-			description: "Een moderne bibliotheek app voor het lenen van boeken",
+			description: "A modern library app for borrowing books",
 			image: debibImage,
 			alt: "De Bib App",
 			background: "bg-gradient-to-t from-[#0FB7AD] to-[#F1FEF9]",

@@ -394,7 +394,7 @@ function Homepage() {
 										Studie Match
 									</h3>
 									<p className="text-gray-700 text-base md:text-lg px-4 md:px-0">
-										Een website die jongeren helpt bij hun studiekeuze
+										A website that helps young people with their study choice
 									</p>
 								</div>
 							</Link>
@@ -415,7 +415,7 @@ function Homepage() {
 										Fiesta Cultura
 									</h3>
 									<p className="text-gray-700 text-base md:text-lg px-4 md:px-0">
-										Een multiculturele festival event app
+										A multicultural festival event app
 									</p>
 								</div>
 							</Link>

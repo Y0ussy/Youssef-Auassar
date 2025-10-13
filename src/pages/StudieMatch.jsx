@@ -6,8 +6,8 @@ import bannerStudieMatch from "../assets/banner-studiematch.png";
 import showcaseStudie from "../assets/showcase-studie.png";
 import fiestaCulturaImage from "../assets/fiesta-cultura.png";
 import debibImage from "../assets/debib.png";
-import moodyImage from "../assets/moody.png";
-import planeImage from "../assets/plane.png";
+// import moodyImage from "../assets/moody.png";
+// import planeImage from "../assets/plane.png";
 import arrowUpBtn from "../assets/arow-up-btn.svg";
 
 function StudieMatch() {
@@ -174,10 +174,10 @@ function StudieMatch() {
 							className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed max-w-6xl mx-auto"
 							style={{ fontFamily: "Poppins, sans-serif" }}
 						>
-							For my bachelor degree, I created this website to address a common
-							challenge many young people face in secondary education: choice
-							stress when determining their study direction. They often have
-							insufficient insight into their own interests and strengths,
+							For my bachelor's project, I created this website to address a
+							common challenge many young people face in secondary education:
+							choice stress when determining their study direction. They often
+							have insufficient insight into their own interests and strengths,
 							making it difficult to make a targeted choice. StudieMatch aims to
 							tackle this problem through an accessible and visually appealing
 							web application that helps young people discover which study
